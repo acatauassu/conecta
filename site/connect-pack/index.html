@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Connect Pack · WIN Conecta 50+</title>
+  <meta name="description" content="Oito pedidos prontos para usar com a inteligência artificial. O presente do WIN Conecta, Edição Especial 50+.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#principal">Ir para o conteúdo</a>
+
+  <header class="wc-topo">
+    <div class="wc-container">
+      <img id="logo-topo" src="../assets/img/win-conecta-colorido.png" alt="WIN Conecta" width="2000" height="343" hidden>
+      <span id="nome-topo" class="wc-legenda" style="font:700 20px/1.2 var(--font-display);color:var(--texto)">WIN Conecta · Connect Pack</span>
+      <a class="wc-link-topo" href="#modelos">Os 8 modelos</a>
+    </div>
+  </header>
+
+  <section class="wc-abertura" id="abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <img class="wc-abertura__logo" src="../assets/img/win-conecta-colorido-com-selo.png" alt="WIN Conecta, Edição Especial 50+" width="2000" height="581">
+      <span class="wc-selo" style="width:fit-content">Connect Pack</span>
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina" style="max-width:16ch">O seu presente.</h1>
+      <p class="wc-leitura" style="margin:0">Oito modelos de pedido para usar a IA no dia a dia. Cada um mostra para que serve, o que você vai receber e como conferir o resultado antes de usar.</p>
+      <p style="margin:0"><a class="wc-btn" href="#modelos">Ver os 8 modelos</a></p>
+    </div>
+  </section>
+
+  <main id="principal">
+    <noscript>
+      <div class="wc-container wc-secao">
+        <div class="wc-aviso"><strong>Ative o JavaScript</strong><p>Esta página monta os pedidos na tela e precisa do JavaScript do navegador para funcionar.</p></div>
+      </div>
+    </noscript>
+
+    <div id="vista-indice">
+      <section class="wc-secao" aria-labelledby="como-usar">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <h2 class="wc-titulo" id="como-usar">Como usar, em 4 passos</h2>
+          <ol class="wc-passos">
+            <li><span>Escolha o modelo que combina com o seu momento.</span></li>
+            <li><span>Troque o que está entre <b style="color:var(--acento)">[colchetes]</b> pelas suas informações.</span></li>
+            <li><span>Copie e cole na IA. Se algo não ficar bom, peça um ajuste.</span></li>
+            <li><span>Confira o resultado antes de usar. Quem decide é você.</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="wc-secao wc-secao--suave" aria-labelledby="avisos">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <h2 class="wc-subtitulo" id="avisos">Dois avisos importantes</h2>
+          <div class="wc-duas">
+            <div class="wc-aviso"><strong>Ponto de partida</strong><p>Os modelos são um bom ponto de partida, mas não garantem o resultado. A IA muda com frequência e pode responder de forma diferente.</p></div>
+            <div class="wc-aviso"><strong>Plano gratuito ou pago</strong><p>Alguns modelos funcionam melhor no plano pago do ChatGPT. Cada página avisa qual é o caso e o que fazer no plano gratuito. Ninguém precisa pagar para começar.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wc-secao" id="modelos" aria-labelledby="titulo-modelos">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <h2 class="wc-titulo" id="titulo-modelos">Os 8 modelos</h2>
+          <ul class="wc-grade" id="grade"></ul>
+        </div>
+      </section>
+    </div>
+
+    <div id="vista-modelo" hidden>
+      <div class="wc-container wc-secao" id="detalhe"></div>
+    </div>
+
+    <section class="wc-secao wc-secao--suave" aria-labelledby="titulo-cartao">
+      <div class="wc-container">
+        <details id="cartao" class="wc-painel">
+          <summary class="wc-painel__titulo" id="titulo-cartao" style="cursor:pointer">Meu cartão de contexto</summary>
+          <div style="display:grid;gap:16px;margin-top:16px">
+            <p class="wc-leitura" style="margin:0">A IA não conhece você. O cartão resolve isso: um resumo curto sobre você, para colar no começo dos pedidos. Conte só o que você se sente à vontade para contar. Sem CPF, senha ou dados de outras pessoas.</p>
+            <div class="wc-campos wc-campos--2" id="cartao-campos"></div>
+            <div class="wc-pedido">
+              <p class="wc-pedido__rotulo">Como fica o seu cartão</p>
+              <p class="wc-pedido__texto" id="cartao-preview"></p>
+              <div class="wc-pedido__acoes">
+                <button type="button" class="wc-btn wc-btn--leve" id="btn-cartao-copiar">Copiar meu cartão</button>
+                <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" id="btn-cartao-exemplo">Ver um cartão de exemplo</button>
+                <button type="button" class="wc-link-botao" id="btn-cartao-apagar">Apagar meu cartão</button>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wc-rodape">
+    <div class="wc-container">
+      <p>O que você escreve nesta página fica só neste aparelho. Nada é enviado à WIN nem a nenhuma IA até você copiar e colar por conta própria.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-tudo">Apagar tudo que escrevi aqui</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/conecta.js"></script>
+  <script src="connect-pack-data.js"></script>
+  <script src="connect-pack.js"></script>
+</body>
+</html>
