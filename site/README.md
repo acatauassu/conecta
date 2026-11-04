@@ -14,7 +14,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 | `assets/` | CSS, JS e logos compartilhados | pronto |
 | `connect-pack/` | Os 8 modelos de pedido, com campos, botão de copiar e cartão de contexto | pronto, falta o teste da equipe (ver abaixo) |
 | `m1/` | Chegada e abertura: check de acesso, cartão de entrada, mapa da noite, combinados e apresentação na mesa | pronto |
-| `m2/` a `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
+| `m2/` | Como a IA funciona: buscador ou conversa, o mesmo pedido de dois jeitos, "pense nela como um estagiário", ela pode errar, cartão de descobertas | pronto |
+| `m3/` a `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
 
 ## Como publicar
 
@@ -47,11 +48,10 @@ site/
   assets/
     css/conecta.css      tokens, componentes e layout (todas as páginas usam)
     js/conecta.js        armazenamento local, copiar, avisos (window.WinConecta)
+    js/pedido.js         componente de pedido pronto para copiar, com campos (window.WinConecta.pedido)
     js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
     img/                 logos WIN Conecta, PNG transparente
-  m1/
-    index.html           Módulo 1
-    m1.js
+  m1/ m2/                Módulos (index.html e um .js cada)
   connect-pack/
     index.html
     connect-pack-data.js os 8 modelos

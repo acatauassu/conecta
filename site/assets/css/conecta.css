@@ -224,3 +224,13 @@ a { color: var(--acento); text-underline-offset: 3px; }
 @media (min-width: 720px) { .wc-combinados { grid-template-columns: 1fr 1fr; } }
 .wc-combinados li { display: grid; gap: var(--espaco-1); padding: var(--espaco-4); border: 2px solid var(--borda); border-radius: var(--raio-painel); background: var(--painel); }
 .wc-combinados b { font: 800 22px/1.25 var(--font-display); }
+
+.wc-tempo { display: inline-flex; align-items: center; width: fit-content; min-height: 32px; padding: 0 var(--espaco-3); border: 2px solid var(--borda); border-radius: var(--raio-pilula); background: var(--painel); color: var(--texto-suave); font: 700 15px/1.2 var(--font-display); }
+.wc-comparar .wc-bloco--destaque { border-color: var(--azul); background: var(--painel-suave); }
+.wc-dica { display: grid; gap: var(--espaco-1); padding: var(--espaco-3) var(--espaco-4); border: 2px solid var(--azul); border-radius: var(--raio-painel); background: var(--painel); }
+.wc-dica p { margin: 0; }
+.wc-ideias { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--espaco-3); counter-reset: ideia; }
+.wc-ideias li { counter-increment: ideia; display: grid; gap: var(--espaco-1); padding: var(--espaco-4) var(--espaco-4) var(--espaco-4) 88px; position: relative; border: 2px solid var(--borda); border-radius: var(--raio-painel); background: var(--painel); }
+.wc-ideias li::before { content: counter(ideia); position: absolute; left: var(--espaco-4); top: var(--espaco-4); display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--raio-pilula); background: var(--azul); color: var(--branco); font: 800 22px/1 var(--font-display); }
+.wc-ideias b { font: 800 24px/1.25 var(--font-display); }
+.wc-ideias span { color: var(--texto-suave); font: 400 18px/1.4 var(--font-body); }
