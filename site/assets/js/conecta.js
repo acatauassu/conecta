@@ -124,7 +124,65 @@
     });
   }
 
+  /* Cartão de exemplo (personagem fictícia do M3) */
+  var CARTAO_EXEMPLO = {
+    quem: 'Marta, 58 anos, nutricionista em Belém',
+    faco: 'Atendo famílias e pequenas empresas',
+    escrevo: 'Clientes e conhecidos, de todas as idades',
+    falo: 'Simples, acolhedora, sem termos difíceis',
+    evito: 'Gírias e textos muito longos'
+  };
+
+  /* Editor do cartão: cinco campos que se salvam sozinhos, prévia e botões.
+     cartaoEditor(elemento, { aoMudar: function () {} }) */
+  function cartaoEditor(raiz, opcoes) {
+    var aoMudar = (opcoes && opcoes.aoMudar) || function () {};
+    raiz.innerHTML =
+      '<div class="wc-campos wc-campos--2" data-campos></div>' +
+      '<div class="wc-pedido">' +
+        '<p class="wc-pedido__rotulo">Como fica o seu cartão</p>' +
+        '<p class="wc-pedido__texto" data-previa></p>' +
+        '<div class="wc-pedido__acoes">' +
+          '<button type="button" class="wc-btn wc-btn--leve" data-copiar-cartao>Copiar meu cartão</button>' +
+          '<button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-cartao-exemplo>Usar o cartão da Marta</button>' +
+          '<button type="button" class="wc-link-botao" data-apagar-cartao>Apagar meu cartão</button>' +
+        '</div>' +
+      '</div>';
+    var area = raiz.querySelector('[data-campos]');
+    var previa = raiz.querySelector('[data-previa]');
+    function pintarPrevia() { previa.textContent = cartaoTexto() || 'Seu cartão aparece aqui conforme você escreve.'; }
+    function montar() {
+      var salvo = getCartao();
+      area.innerHTML = CAMPOS_CARTAO.map(function (c) {
+        return '<div class="wc-campo"><label for="cc-' + c.id + '">' + escapar(c.rotulo) + '</label>' +
+          '<small id="cc-' + c.id + '-d">' + escapar(c.dica) + '</small>' +
+          '<input id="cc-' + c.id + '" type="text" aria-describedby="cc-' + c.id + '-d" autocomplete="off" value="' + escapar(salvo[c.id]) + '"></div>';
+      }).join('');
+      area.querySelectorAll('input').forEach(function (el) {
+        el.addEventListener('input', function () {
+          var obj = getCartao(); obj[el.id.slice(3)] = el.value; setCartao(obj); pintarPrevia(); aoMudar();
+        });
+      });
+      pintarPrevia();
+    }
+    raiz.querySelector('[data-copiar-cartao]').addEventListener('click', function () {
+      var t = cartaoTexto();
+      if (!t) { toast('Escreva alguma coisa no cartão antes de copiar.'); return; }
+      copiar(t, previa, 'Cartão copiado. Cole nas notas do celular.');
+    });
+    raiz.querySelector('[data-cartao-exemplo]').addEventListener('click', function () {
+      setCartao(CARTAO_EXEMPLO); montar(); aoMudar(); toast('Cartão da Marta no lugar. Troque pelos seus dados quando quiser.');
+    });
+    raiz.querySelector('[data-apagar-cartao]').addEventListener('click', function () {
+      store.remove('cartao'); montar(); aoMudar(); toast('Cartão apagado.');
+    });
+    montar();
+    return { atualizar: montar };
+  }
+
   window.WinConecta = {
+    CARTAO_EXEMPLO: CARTAO_EXEMPLO,
+    cartaoEditor: cartaoEditor,
     store: store,
     CAMPOS_CARTAO: CAMPOS_CARTAO,
     getCartao: getCartao,

@@ -6,7 +6,7 @@
      rotulo:  'Pedido 2',             // título pequeno da caixa
      template:'Sugira {{n}} presentes...',  // texto com {{campos}}; o resto é copiado exatamente
      campos: {                        // opcional
-       n: { tipo: 'curto' | 'longo' | 'escolha' | 'cartao', rotulo, dica, marcador, padrao, opcoes }
+       n: { tipo: 'curto' | 'longo' | 'escolha' | 'cartao', rotulo, dica, marcador, padrao, opcoes, exemplo }
      },
      camposRecolhidos: 'Quer trocar ...?'  // opcional: põe os campos dentro de um "abrir"
      rodape:  'texto pequeno abaixo dos botões' // opcional
@@ -57,9 +57,13 @@
       if (salvo) ids.forEach(function (k) { if (salvo[k] !== undefined) valores[k] = salvo[k]; });
     }
 
+    var temExemplo = ids.some(function (k) { return def.campos[k].exemplo !== undefined; });
     var camposHtml = ids.length
       ? '<div class="wc-campos wc-campos--2">' + ids.map(function (k) { return htmlCampo(k, def.campos[k], uid); }).join('') + '</div>' +
-        '<p style="margin:0"><button type="button" class="wc-link-botao" data-restaurar>Voltar ao pedido original</button></p>'
+        '<div class="wc-pedido__acoes">' +
+          (temExemplo ? '<button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-exemplo>Ver um exemplo preenchido</button>' : '') +
+          '<button type="button" class="wc-link-botao" data-restaurar>' + (temExemplo ? 'Limpar os campos' : 'Voltar ao pedido original') + '</button>' +
+        '</div>'
       : '';
     var blocoCampos = !ids.length ? '' : (def.camposRecolhidos
       ? '<details class="wc-painel" style="gap:0"><summary class="wc-painel__titulo" style="cursor:pointer;font-size:20px">' + W.escapar(def.camposRecolhidos) + '</summary><div style="display:grid;gap:16px;margin-top:16px">' + camposHtml + '</div></details>'
@@ -98,6 +102,16 @@
         pintar();
       });
     });
+    var ex = raiz.querySelector('[data-exemplo]');
+    if (ex) ex.addEventListener('click', function () {
+      ids.forEach(function (k) {
+        var c = def.campos[k];
+        if (c.exemplo !== undefined) { valores[k] = c.exemplo; raiz.querySelector('#' + uid + '-' + k).value = c.exemplo; }
+      });
+      if (def.chave) W.store.set(def.chave, valores);
+      pintar();
+      W.toast('Exemplo com dados fictícios. Troque pelos seus.');
+    });
     var rest = raiz.querySelector('[data-restaurar]');
     if (rest) rest.addEventListener('click', function () {
       valores = {};
@@ -107,7 +121,7 @@
       });
       if (def.chave) W.store.set(def.chave, valores);
       pintar();
-      W.toast('Pedido original de volta.');
+      W.toast(temExemplo ? 'Campos limpos.' : 'Pedido original de volta.');
     });
     raiz.querySelector('[data-copiar]').addEventListener('click', function () {
       W.copiar(montar(def, valores).texto, alvoTexto);

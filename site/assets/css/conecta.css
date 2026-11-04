@@ -234,3 +234,10 @@ a { color: var(--acento); text-underline-offset: 3px; }
 .wc-ideias li::before { content: counter(ideia); position: absolute; left: var(--espaco-4); top: var(--espaco-4); display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--raio-pilula); background: var(--azul); color: var(--branco); font: 800 22px/1 var(--font-display); }
 .wc-ideias b { font: 800 24px/1.25 var(--font-display); }
 .wc-ideias span { color: var(--texto-suave); font: 400 18px/1.4 var(--font-body); }
+
+.wc-ficha { display: grid; gap: var(--espaco-2); padding: var(--espaco-4); border: 2px dashed var(--borda); border-radius: var(--raio-painel); background: var(--painel); }
+.wc-ficha__titulo { margin: 0; font: 800 15px/1.2 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; color: var(--acento); }
+.wc-ficha dl { margin: 0; display: grid; gap: var(--espaco-2); }
+.wc-ficha dt { font: 800 15px/1.2 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; color: var(--texto-suave); }
+.wc-ficha dd { margin: 0 0 var(--espaco-2); font: 500 20px/1.4 var(--font-body); }
+.wc-rotulo-c { margin: 0; font: 800 15px/1.2 var(--font-display); letter-spacing: 0.02em; text-transform: uppercase; color: var(--acento); }
