@@ -13,7 +13,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 | --- | --- | --- |
 | `assets/` | CSS, JS e logos compartilhados | pronto |
 | `connect-pack/` | Os 8 modelos de pedido, com campos, botão de copiar e cartão de contexto | pronto, falta o teste da equipe (ver abaixo) |
-| `m1/` a `m9/` | Módulos do caderno | em desenvolvimento, um por vez |
+| `m1/` | Chegada e abertura: check de acesso, cartão de entrada, mapa da noite, combinados e apresentação na mesa | pronto |
+| `m2/` a `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
 
 ## Como publicar
 
@@ -31,6 +32,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 
 - **Testar os 8 modelos no ChatGPT** (plano gratuito e pago) e preencher `testadoEm` de cada um em `connect-pack/connect-pack-data.js`, no formato `"25/11/2026"`. Enquanto estiver `null`, a data não aparece na página.
 - **Gerar o QR code** do endereço `connect-pack/` e substituir nos materiais.
+- **Preencher o Wi-Fi** em `assets/js/config.js` (`wifiRede` e `wifiSenha`). Enquanto estiver vazio, o M1 mostra "A equipe informa na sala". Confira também a data, o horário e o local nesse arquivo.
+- **Conferir os links das lojas** no passo 3 do M1 (App Store e Google Play do ChatGPT), porque os endereços das lojas podem mudar.
 - **Abrir cada página** no celular e no notebook, pelo menos uma vez, antes de publicar.
 
 ## Como editar o texto dos modelos
@@ -44,7 +47,11 @@ site/
   assets/
     css/conecta.css      tokens, componentes e layout (todas as páginas usam)
     js/conecta.js        armazenamento local, copiar, avisos (window.WinConecta)
+    js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
     img/                 logos WIN Conecta, PNG transparente
+  m1/
+    index.html           Módulo 1
+    m1.js
   connect-pack/
     index.html
     connect-pack-data.js os 8 modelos

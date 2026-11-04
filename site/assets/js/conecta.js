@@ -104,16 +104,22 @@
     });
   }
 
-  /* Campos que se salvam sozinhos: <input data-salvar="chave"> */
+  /* Campos que se salvam sozinhos: <input data-salvar="chave">.
+     Funciona com texto, caixa de seleção e grupo de opções (radio: todas com a mesma chave). */
   function salvarCampos(raiz) {
     (raiz || document).querySelectorAll('[data-salvar]').forEach(function (el) {
       var chave = el.getAttribute('data-salvar');
       var salvo = store.get(chave, null);
       if (salvo !== null) {
-        if (el.type === 'checkbox') el.checked = !!salvo; else el.value = salvo;
+        if (el.type === 'checkbox') el.checked = !!salvo;
+        else if (el.type === 'radio') el.checked = (el.value === salvo);
+        else el.value = salvo;
       }
-      el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function () {
-        store.set(chave, el.type === 'checkbox' ? el.checked : el.value);
+      var evento = (el.type === 'checkbox' || el.type === 'radio' || el.tagName === 'SELECT') ? 'change' : 'input';
+      el.addEventListener(evento, function () {
+        if (el.type === 'checkbox') store.set(chave, el.checked);
+        else if (el.type === 'radio') { if (el.checked) store.set(chave, el.value); }
+        else store.set(chave, el.value);
       });
     });
   }
