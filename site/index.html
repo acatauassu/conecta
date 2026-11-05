@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Caderno digital · WIN Conecta 50+</title>
+  <meta name="description" content="O caderno digital do WIN Conecta, Edição Especial 50+: faça as atividades da noite no seu aparelho, com os nove módulos e o Connect Pack.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#modulos">Ir para os módulos</a>
+
+  <section class="wc-abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <img class="wc-abertura__logo" src="assets/img/win-conecta-colorido-com-selo.png" alt="WIN Conecta, Edição Especial 50+" width="2000" height="581">
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina">Caderno digital</h1>
+      <p class="wc-leitura" style="margin:0">Faça as atividades da noite no seu aparelho, no seu ritmo. O que você escrever fica só aqui, neste aparelho, e você pode levar tudo para casa no final.</p>
+      <div class="wc-barra" id="barra-evento" style="width:fit-content;max-width:100%">
+        <span data-cfg="data">25/11/2026 (quarta)</span><span class="wc-barra__sep">•</span>
+        <span data-cfg="horario">17h às 22h</span><span class="wc-barra__sep">•</span>
+        <span data-cfg="local">Nex Hall, Belém/PA</span>
+      </div>
+      <p style="margin:0"><a class="wc-btn" id="btn-continuar" href="m1/index.html">Começar pelo Módulo 1</a></p>
+    </div>
+  </section>
+
+  <main>
+    <noscript>
+      <div class="wc-container wc-secao"><div class="wc-aviso"><strong>Ative o JavaScript</strong><p>O caderno guarda o que você escreve e mostra o seu progresso. Ele precisa do JavaScript do navegador. Peça ajuda à equipe da sua mesa.</p></div></div>
+    </noscript>
+
+    <section class="wc-secao" id="modulos" aria-labelledby="t-modulos">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div>
+          <h2 class="wc-titulo" id="t-modulos">Os módulos da noite</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Cada módulo é uma etapa da noite, na mesma ordem. Eles se salvam sozinhos. Você pode voltar a qualquer um, quando quiser.</p>
+        <ol class="wc-grade" id="lista-modulos"></ol>
+      </div>
+    </section>
+
+    <section class="wc-secao wc-secao--suave" aria-labelledby="t-levar">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <h2 class="wc-titulo" id="t-levar">Para levar para casa</h2>
+        <ul class="wc-grade">
+          <li><a class="wc-cartao" href="connect-pack/index.html">
+            <span class="wc-cartao__num">O presente</span>
+            <span class="wc-cartao__titulo">Connect Pack</span>
+            <span class="wc-cartao__txt">Oito modelos de pedido prontos, com campos para preencher e botão de copiar.</span>
+          </a></li>
+          <li><a class="wc-cartao" href="meu-caderno/index.html">
+            <span class="wc-cartao__num">Tudo o que você escreveu</span>
+            <span class="wc-cartao__titulo">Meu caderno</span>
+            <span class="wc-cartao__txt">Reúne o seu cartão, os seus textos e os seus prompts. Dá para imprimir, salvar em PDF ou copiar.</span>
+          </a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wc-secao" aria-labelledby="t-como">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <h2 class="wc-subtitulo" id="t-como">Como funciona</h2>
+        <ul class="wc-combinados">
+          <li><b>Salva sozinho</b><span>Tudo o que você escreve fica guardado neste aparelho, sem apertar nada.</span></li>
+          <li><b>Só seu</b><span>Nada é enviado à WIN nem a nenhuma IA. Você copia e cola nos pedidos por conta própria.</span></li>
+          <li><b>Mesmo aparelho</b><span>Use sempre o mesmo celular ou notebook e o mesmo navegador. Se você trocar de aparelho, o caderno começa vazio.</span></li>
+          <li><b>Pode apagar</b><span>Quando quiser, use o link no rodapé para apagar tudo o que escreveu aqui.</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wc-rodape">
+    <div class="wc-container">
+      <p>O que você escreve no caderno fica só neste aparelho. Nada é enviado à WIN nem a nenhuma IA.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-tudo">Apagar tudo que escrevi no curso</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/conecta.js"></script>
+  <script src="assets/js/progresso.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

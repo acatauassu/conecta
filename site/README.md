@@ -11,6 +11,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 
 | Pasta | Conteúdo | Situação |
 | --- | --- | --- |
+| `index.html` | Página inicial: os 9 módulos na ordem da noite, com o progresso de cada um e o botão "Continuar de onde parei" | pronto |
+| `meu-caderno/` | Tudo o que a pessoa escreveu, reunido: imprimir, salvar em PDF ou copiar como texto | pronto |
 | `assets/` | CSS, JS e logos compartilhados | pronto |
 | `connect-pack/` | Os 8 modelos de pedido, com campos, botão de copiar e cartão de contexto | pronto, falta o teste da equipe (ver abaixo) |
 | `m1/` | Chegada e abertura: check de acesso, cartão de entrada, mapa da noite, combinados e apresentação na mesa | pronto |
@@ -26,7 +28,7 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 ## Como publicar
 
 1. Copie a pasta `site/` inteira para o servidor, mantendo a estrutura. Todos os links são relativos, então funciona em qualquer caminho (por exemplo, `winnext.com.br/win-conecta/curso/`).
-2. O endereço do Connect Pack é `<caminho>/connect-pack/`. Use esse endereço no QR code do caderno impresso e do slide 6 do M9.
+2. A página inicial é `<caminho>/index.html`. O endereço do Connect Pack é `<caminho>/connect-pack/index.html`. Use esse endereço no QR code do caderno impresso e do slide 6 do M9.
 3. Também dá para embutir uma página em outra por `iframe`.
 
 **Requisitos do servidor**
@@ -43,6 +45,7 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 - **Preencher `avaliacaoUrl` e `proximosCursosUrl`** em `assets/js/config.js`. O M9 mostra o botão da avaliação e o dos próximos cursos só quando o endereço estiver preenchido.
 - **Conferir os links das lojas** no passo 3 do M1 (App Store e Google Play do ChatGPT), porque os endereços das lojas podem mudar.
 - **Confirmar o nome "Gemini Notebook"** (antes NotebookLM) no M7, e os endereços das outras IAs (chatgpt.com, perplexity.ai, gemini.google.com). Nomes e recursos mudam com frequência.
+- **Imprimir o Meu caderno** em um navegador de verdade e conferir o PDF. A impressão é em preto e branco, sem menus.
 - **Abrir cada página** no celular e no notebook, pelo menos uma vez, antes de publicar.
 
 ## Como editar o texto dos modelos
@@ -56,9 +59,12 @@ site/
   assets/
     css/conecta.css      tokens, componentes e layout (todas as páginas usam)
     js/conecta.js        armazenamento local, copiar, avisos (window.WinConecta)
+    js/progresso.js      calcula o progresso de cada módulo, a partir do que a pessoa escreveu
     js/pedido.js         componente de pedido pronto para copiar, com campos (window.WinConecta.pedido)
     js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
     img/                 logos WIN Conecta, PNG transparente
+  index.html, home.js    Página inicial
+  meu-caderno/           Meu caderno (index.html e caderno.js)
   m1/ ... m9/            Módulos (index.html e um .js cada)
   connect-pack/
     index.html

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Meu caderno · WIN Conecta 50+</title>
+  <meta name="description" content="O seu caderno do WIN Conecta, Edição Especial 50+: tudo o que você escreveu nos módulos, para imprimir, salvar em PDF ou copiar.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="wc-topo no-print">
+    <div class="wc-container">
+      <img src="../assets/img/win-conecta-colorido.png" alt="WIN Conecta" width="2000" height="343">
+      <a class="wc-link-topo" href="../index.html">Início</a>
+    </div>
+  </header>
+
+  <section class="wc-abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <span class="wc-selo no-print" style="width:fit-content">Meu caderno</span>
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina">Meu caderno</h1>
+      <p class="wc-leitura" style="margin:0" id="subtitulo">WIN Conecta · Edição Especial 50+ · 25/11/2026</p>
+      <p class="wc-leitura no-print" style="margin:0">Aqui está tudo o que você escreveu nos módulos, em um só lugar. Só você vê esta página: nada é enviado a ninguém.</p>
+    </div>
+  </section>
+
+  <main id="conteudo">
+    <noscript>
+      <div class="wc-container wc-secao"><div class="wc-aviso"><strong>Ative o JavaScript</strong><p>O caderno monta esta página a partir do que você escreveu neste aparelho. Ele precisa do JavaScript do navegador.</p></div></div>
+    </noscript>
+
+    <section class="wc-secao no-print" style="padding-block:24px 0">
+      <div class="wc-container" style="display:grid;gap:16px">
+        <div class="wc-pedido__acoes">
+          <button type="button" class="wc-btn" id="btn-imprimir">Imprimir ou salvar em PDF</button>
+          <button type="button" class="wc-btn wc-btn--secundario" id="btn-copiar">Copiar tudo como texto</button>
+        </div>
+        <label class="wc-item" style="width:fit-content;min-height:48px"><input type="checkbox" id="chk-vazios"><div><b>Mostrar também o que ainda não preenchi</b></div></label>
+        <p class="wc-legenda" style="margin:0">Para salvar em PDF, escolha “Salvar como PDF” na janela de impressão do seu navegador. O texto copiado serve para colar no WhatsApp, no e-mail ou nas notas do celular.</p>
+      </div>
+    </section>
+
+    <section class="wc-secao" aria-label="Conteúdo do caderno">
+      <div class="wc-container" style="display:grid;gap:24px" id="caderno"></div>
+    </section>
+  </main>
+
+  <footer class="wc-rodape no-print">
+    <div class="wc-container">
+      <p>O que você escreve no caderno fica só neste aparelho. Nada é enviado à WIN nem a nenhuma IA.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-tudo">Apagar tudo que escrevi no curso</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/conecta.js"></script>
+  <script src="../connect-pack/connect-pack-data.js"></script>
+  <script src="caderno.js"></script>
+</body>
+</html>

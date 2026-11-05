@@ -18,7 +18,7 @@
     8: 'Organizar a semana, tarefas e lembretes.'
   };
   $('#grade-modelos').innerHTML = MODELOS.map(function (m) {
-    return '<li><a class="wc-cartao" href="../connect-pack/#modelo-' + m.id + '">' +
+    return '<li><a class="wc-cartao" href="../connect-pack/index.html#modelo-' + m.id + '">' +
       '<span class="wc-cartao__num">Modelo ' + m.id + (m.id <= 3 ? ' · praticado hoje' : ' · novo') + '</span>' +
       '<span class="wc-cartao__titulo">' + W.escapar(m.titulo) + '</span>' +
       '<span class="wc-cartao__txt">' + W.escapar(LINHAS[m.id] || m.resultado) + '</span>' +
@@ -42,11 +42,11 @@
   function preenchido(chave) { var v = W.store.get(chave, ''); return typeof v === 'string' && v.trim().length > 0; }
   function todos(chaves) { return chaves.every(function (k) { return W.store.get(k, false) === true; }); }
   var ITENS = [
-    { nome: 'Meu cartão de contexto', feito: !!W.cartaoTexto(), onde: '../m3/#monte-cartao', modulo: 'Módulo 3' },
-    { nome: 'Tarefa 1 · Escrever com a minha voz: prompt validado', feito: preenchido('m4.validado'), onde: '../m4/#registro', modulo: 'Módulo 4' },
-    { nome: 'Régua dos 5 passada em um texto meu', feito: todos(['m5.regua.nomes', 'm5.regua.numeros', 'm5.regua.fatos', 'm5.regua.promessas', 'm5.regua.jeito']), onde: '../m5/#passe', modulo: 'Módulo 5' },
-    { nome: 'Tarefa 2 · Preparar a reunião: abertura de 2 minutos', feito: preenchido('m6.abertura') || preenchido('m6.funcionou'), onde: '../m6/#fazer', modulo: 'Módulo 6' },
-    { nome: 'Tarefa 3 · Divulgar o meu trabalho: post ou prompt validado', feito: preenchido('m8.legenda') || preenchido('m8.validado'), onde: '../m8/#fazer', modulo: 'Módulo 8' }
+    { nome: 'Meu cartão de contexto', feito: !!W.cartaoTexto(), onde: '../m3/index.html#monte-cartao', modulo: 'Módulo 3' },
+    { nome: 'Tarefa 1 · Escrever com a minha voz: prompt validado', feito: preenchido('m4.validado'), onde: '../m4/index.html#registro', modulo: 'Módulo 4' },
+    { nome: 'Régua dos 5 passada em um texto meu', feito: todos(['m5.regua.nomes', 'm5.regua.numeros', 'm5.regua.fatos', 'm5.regua.promessas', 'm5.regua.jeito']), onde: '../m5/index.html#passe', modulo: 'Módulo 5' },
+    { nome: 'Tarefa 2 · Preparar a reunião: abertura de 2 minutos', feito: preenchido('m6.abertura') || preenchido('m6.funcionou'), onde: '../m6/index.html#fazer', modulo: 'Módulo 6' },
+    { nome: 'Tarefa 3 · Divulgar o meu trabalho: post ou prompt validado', feito: preenchido('m8.legenda') || preenchido('m8.validado'), onde: '../m8/index.html#fazer', modulo: 'Módulo 8' }
   ];
   var feitos = 0;
   $('#resumo').innerHTML = ITENS.map(function (i) {
