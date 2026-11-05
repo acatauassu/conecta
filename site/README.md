@@ -48,6 +48,10 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 - **Imprimir o Meu caderno** em um navegador de verdade e conferir o PDF. A impressão é em preto e branco, sem menus.
 - **Abrir cada página** no celular e no notebook, pelo menos uma vez, antes de publicar.
 
+## Qualidade e acessibilidade
+
+O site foi verificado com o axe-core (WCAG 2.1 A e AA), sem nenhuma violação, no computador e no celular, nos modos claro e escuro. Os alvos de toque têm pelo menos 44px, nenhum texto fica abaixo de 16px, o foco do teclado é visível e as páginas não rolam para o lado a 320px. Os scripts para repetir essa verificação estão na pasta `qa/`, na raiz do repositório, com instruções.
+
 ## Como editar o texto dos modelos
 
 Os textos dos 8 modelos estão em `connect-pack/connect-pack-data.js`, com instruções no topo do arquivo. Não é preciso mexer no HTML nem no JavaScript da página.
@@ -62,7 +66,7 @@ site/
     js/progresso.js      calcula o progresso de cada módulo, a partir do que a pessoa escreveu
     js/pedido.js         componente de pedido pronto para copiar, com campos (window.WinConecta.pedido)
     js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
-    img/                 logos WIN Conecta, PNG transparente
+    img/                 logos WIN Conecta, PNG transparente (o "-pequeno" é o do cabeçalho, com 39 KB)
   index.html, home.js    Página inicial
   meu-caderno/           Meu caderno (index.html e caderno.js)
   m1/ ... m9/            Módulos (index.html e um .js cada)

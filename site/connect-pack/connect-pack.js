@@ -124,18 +124,18 @@
       '<p><a href="#modelos" class="wc-link-botao" style="font-weight:700">← Todos os modelos</a></p>' +
       '<div style="display:grid;gap:12px">' +
         '<span class="wc-cartao__num">Modelo ' + modelo.id + ' de ' + MODELOS.length + '</span>' +
-        '<h2 class="wc-titulo" id="titulo-modelo" tabindex="-1">' + W.escapar(modelo.titulo) + '</h2>' +
+        '<h1 class="wc-titulo" id="titulo-modelo" tabindex="-1">' + W.escapar(modelo.titulo) + '</h1>' +
         '<p class="wc-plano' + (modelo.planoTipo === 'pago' ? ' wc-plano--pago' : '') + '" style="margin:24px 0 0">' + W.escapar(modelo.plano) + '</p>' +
         (modelo.testadoEm ? '<p class="wc-legenda" style="margin:0">Último teste da equipe: ' + W.escapar(modelo.testadoEm) + '</p>' : '') +
       '</div>' +
       '<div class="wc-duas">' +
-        '<div class="wc-bloco"><h3>Para que serve</h3><p>' + W.escapar(modelo.paraQue) + '</p></div>' +
-        '<div class="wc-bloco"><h3>O resultado que você terá</h3><p>' + W.escapar(modelo.resultado) + '</p></div>' +
-        '<div class="wc-bloco"><h3>Quando usar</h3>' + listaHtml(modelo.quando) + '</div>' +
-        '<div class="wc-bloco"><h3>Se não funcionar</h3><p>' + W.escapar(modelo.seNaoFuncionar) + '</p></div>' +
+        '<div class="wc-bloco"><h2>Para que serve</h2><p>' + W.escapar(modelo.paraQue) + '</p></div>' +
+        '<div class="wc-bloco"><h2>O resultado que você terá</h2><p>' + W.escapar(modelo.resultado) + '</p></div>' +
+        '<div class="wc-bloco"><h2>Quando usar</h2>' + listaHtml(modelo.quando) + '</div>' +
+        '<div class="wc-bloco"><h2>Se não funcionar</h2><p>' + W.escapar(modelo.seNaoFuncionar) + '</p></div>' +
       '</div>' +
       '<section class="wc-painel" aria-labelledby="monte">' +
-        '<h3 class="wc-painel__titulo" id="monte">Monte o seu pedido</h3>' +
+        '<h2 class="wc-painel__titulo" id="monte">Monte o seu pedido</h2>' +
         '<p class="wc-leitura" style="margin:0">Preencha os campos. O pedido abaixo se atualiza sozinho. O que você escreve fica só neste aparelho.</p>' +
         (temCartao ? '<div class="wc-bloco" id="cartao-no-modelo" style="background:var(--painel-suave)"></div>' : '') +
         '<div class="wc-campos wc-campos--2">' + ids.map(function (id2) { return htmlCampo(modelo, id2); }).join('') + '</div>' +
@@ -155,7 +155,7 @@
         '<p class="wc-legenda" style="margin:0">O pedido é um bom ponto de partida e não garante o resultado. A IA pode responder de forma diferente a cada vez.</p>' +
       '</section>' +
       '<section class="wc-painel" aria-labelledby="conf">' +
-        '<h3 class="wc-painel__titulo" id="conf">Confira antes de usar</h3>' +
+        '<h2 class="wc-painel__titulo" id="conf">Confira antes de usar</h2>' +
         '<ul class="wc-lista">' + modelo.conferir.map(function (q, i) {
           return '<li><label class="wc-item"><input type="checkbox" data-conf="' + i + '"' + (feitos[i] ? ' checked' : '') + '><div><b>' + W.escapar(q) + '</b></div></label></li>';
         }).join('') + '</ul>' +
