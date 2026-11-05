@@ -1,4 +1,21 @@
-# Checklist de entrega · WIN Conecta 50+ · Caderno digital
+---
+title: "Checklist de entrega"
+subtitle: "WIN Conecta 50+ · Caderno digital"
+author: "WIN Business School"
+date: "05/11/2026"
+lang: pt-BR
+---
+
+# Controle deste documento
+
+| Campo | Valor |
+|----------|--------------------------------------------|
+| Versão do documento | 1.0.0 |
+| Data | 05/11/2026 |
+| Código a que se refere | commit `ce95c69`; a etiqueta `v1.0.0` inclui também este documento |
+| Para quem | Time de desenvolvimento da WIN, com apoio de Denis e Ely |
+
+# Como usar este checklist
 
 **Evento:** 25/11/2026 (quarta-feira), das 17h às 22h, Nex Hall, Belém/PA.
 **Código:** pasta `site/`, branch `claude/keen-lovelace-47ook9` do repositório `acatauassu/conecta`.
