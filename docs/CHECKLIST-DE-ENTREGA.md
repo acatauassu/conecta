@@ -12,7 +12,7 @@ lang: pt-BR
 |----------|--------------------------------------------|
 | Versão do documento | 1.0.0 |
 | Data | 05/11/2026 |
-| Código a que se refere | commit `ce95c69`; a etiqueta `v1.0.0` inclui também este documento |
+| Código a que se refere | commit `ce95c69` (site). A etiqueta `v1.0.0` marca a versão que contém este documento (ver `HISTORICO-DE-VERSOES.md`) |
 | Para quem | Time de desenvolvimento da WIN, com apoio de Denis e Ely |
 
 # Como usar este checklist
@@ -133,7 +133,11 @@ O site está pronto para os participantes quando **todos os itens [BLOQUEIA] est
 
 ## Versão e rastreio
 
-Ao concluir, o time deve registrar a **versão publicada** (o código do commit ou a etiqueta) e a data, no próprio checklist ou no histórico de versões em `docs/`.
+| # | Item | Situação |
+| --- | --- | --- |
+| V1 | Abrir o **pull request** da branch `claude/keen-lovelace-47ook9` para a `main`, revisar e mesclar. | ☐ |
+| V2 | **Criar a etiqueta `v1.0.0`** (comandos em `HISTORICO-DE-VERSOES.md`). O ambiente de produção deste material não tem permissão para criar etiquetas. | ☐ |
+| V3 | Registrar a **versão publicada** (o código do commit ou a etiqueta) e a data na tabela abaixo. | ☐ |
 
 | Versão publicada | Data | Quem publicou |
 | --- | --- | --- |

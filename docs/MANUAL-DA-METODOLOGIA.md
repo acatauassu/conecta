@@ -12,7 +12,7 @@ lang: pt-BR
 |----------|--------------------------------------------|
 | Versão do documento | 1.0.0 |
 | Data | 05/11/2026 |
-| Código a que se refere | commit `ce95c69`; a etiqueta `v1.0.0` inclui também estes documentos |
+| Código a que se refere | commit `ce95c69` (site). A etiqueta `v1.0.0` marca a versão que contém estes documentos (ver `HISTORICO-DE-VERSOES.md`) |
 | Para quem | Denis (instrutor), Ely Ribeiro (segunda facilitadora), apoios, e quem criar novas edições |
 | Documentos irmãos | `CHECKLIST-DE-ENTREGA.md`, `DOCUMENTACAO-TECNICA.md`, `HISTORICO-DE-VERSOES.md` |
 

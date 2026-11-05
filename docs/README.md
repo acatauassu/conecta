@@ -1,6 +1,6 @@
 # Documentação do WIN Conecta 50+
 
-Versão 1.0.0 · 05/11/2026. Código a que se refere: commit `ce95c69`. A etiqueta `v1.0.0` inclui também estes documentos.
+Versão 1.0.0 · 05/11/2026. Código a que se refere: commit `ce95c69` (site). A etiqueta `v1.0.0` marca a versão que contém estes documentos (ver `HISTORICO-DE-VERSOES.md`).
 
 | Documento | Para quem | O que traz |
 | --- | --- | --- |

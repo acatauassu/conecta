@@ -12,7 +12,7 @@ lang: pt-BR
 |----------|--------------------------------------------|
 | Versão do documento | 1.0.0 |
 | Data | 05/11/2026 |
-| Código a que se refere | commit `ce95c69`; a etiqueta `v1.0.0` inclui também estes documentos |
+| Código a que se refere | commit `ce95c69` (site). A etiqueta `v1.0.0` marca a versão que contém estes documentos (ver `HISTORICO-DE-VERSOES.md`) |
 | Repositório | `acatauassu/conecta` |
 | Branch | `claude/keen-lovelace-47ook9` |
 
@@ -30,7 +30,7 @@ O projeto usa três números: **MAIOR.MENOR.CORREÇÃO**.
 
 # Versão atual
 
-**v1.0.0 · 05/11/2026 · entrega para o time de desenvolvimento.** Contém a base, o Connect Pack, os 9 módulos, a página inicial, o Meu caderno, a revisão de acessibilidade, o checklist de entrega, o manual, a documentação técnica e este histórico. Só a etiqueta `v1.0.0` existe no GitHub. As versões 0.x abaixo foram numeradas depois, a partir do histórico do código, para facilitar a leitura.
+**v1.0.0 · 05/11/2026 · entrega para o time de desenvolvimento.** Contém a base, o Connect Pack, os 9 módulos, a página inicial, o Meu caderno, a revisão de acessibilidade, o checklist de entrega, o manual, a documentação técnica e este histórico. **A etiqueta `v1.0.0` ainda precisa ser criada no GitHub:** o ambiente em que este material foi produzido não tem permissão para criar etiquetas. Os comandos estão na seção "Como criar a etiqueta v1.0.0". As versões 0.x abaixo foram numeradas depois, a partir do histórico do código, para facilitar a leitura.
 
 # Histórico
 
@@ -50,7 +50,7 @@ O projeto usa três números: **MAIOR.MENOR.CORREÇÃO**.
 | 0.11.0 | 05/11/2026 | `d1c0db6` | **Página inicial e Meu caderno.** Progresso por módulo, "continuar de onde parei", impressão em PDF e cópia como texto. Links entre páginas passam a apontar para `index.html`. |
 | 0.12.0 | 05/11/2026 | `e5e29ce` | **Revisão de acessibilidade, consistência e desempenho.** Axe-core sem violações, alvos de toque de 44 px, texto mínimo de 16 px, demonstração do M6 e tempo do M7 corrigidos, logo pequeno (39 KB). Scripts de verificação em `qa/`. |
 | 0.13.0 | 05/11/2026 | `ce95c69` | **Checklist de entrega** para o time de desenvolvimento. |
-| **1.0.0** | 05/11/2026 | etiqueta `v1.0.0` | **Entrega.** Manual da metodologia, documentação técnica e este histórico. |
+| **1.0.0** | 05/11/2026 | ponta da branch | **Entrega.** Manual da metodologia, documentação técnica e este histórico. |
 
 # Mudanças de rumo durante o projeto
 
@@ -77,6 +77,7 @@ Estão detalhadas no `CHECKLIST-DE-ENTREGA.md`.
 | Testar os 8 modelos no ChatGPT e preencher a data | `connect-pack-data.js` |
 | Conferir os links das lojas de aplicativos | M1 |
 | Preencher Wi-Fi, avaliação e próximos cursos | `config.js` |
+| Criar a etiqueta `v1.0.0` e abrir o pull request para a `main` | GitHub |
 | Revisão ortográfica completa | todas as páginas |
 | Teste com leitor de tela e em aparelhos reais | todas as páginas |
 
@@ -87,6 +88,18 @@ Estão detalhadas no `CHECKLIST-DE-ENTREGA.md`.
 | WIN Conecta Design Book (design system) | v5 | Mantido na plataforma Claude, privado. Última mudança: selo de 15 px para 16 px. |
 | Prévia do caderno digital | v11 | Cópia para revisão. A fonte de verdade é o repositório. |
 | Esqueleto, proposta, briefing e caderno (DOCX/PDF) | material de origem | Na raiz do repositório, commit `38166d0`. |
+
+# Como criar a etiqueta v1.0.0
+
+Rode no computador de quem tem permissão de escrita no repositório, depois de conferir o checklist de entrega. A etiqueta deve apontar para a **ponta da branch**, que é o commit que contém o site e estes documentos:
+
+```bash
+git fetch origin
+git tag -a v1.0.0 origin/claude/keen-lovelace-47ook9 -m "v1.0.0 · Entrega do caderno digital WIN Conecta 50+"
+git push origin v1.0.0
+```
+
+Se o time mesclar a branch na `main` antes de criar a etiqueta, aponte a etiqueta para o commit de mesclagem na `main`.
 
 # Como publicar uma nova versão
 

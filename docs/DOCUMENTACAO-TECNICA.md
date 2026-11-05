@@ -12,7 +12,7 @@ lang: pt-BR
 |----------|--------------------------------------------|
 | Versão do documento | 1.0.0 |
 | Data | 05/11/2026 |
-| Código a que se refere | commit `ce95c69`; a etiqueta `v1.0.0` inclui também estes documentos |
+| Código a que se refere | commit `ce95c69` (site). A etiqueta `v1.0.0` marca a versão que contém estes documentos (ver `HISTORICO-DE-VERSOES.md`) |
 | Repositório | `acatauassu/conecta` |
 | Branch | `claude/keen-lovelace-47ook9` |
 | Para quem | Time de desenvolvimento da WIN e quem mantiver o projeto |
