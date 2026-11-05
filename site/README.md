@@ -18,7 +18,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 | `m3/` | Os 4 C e o cartão de contexto: pedido montado a partir dos 4 C, cartão com 5 campos, teste do cartão | pronto |
 | `m4/` | Tarefa 1, escrever com a minha voz: escolha do texto, pedido fraco e forte, pedido montado com o cartão, ajustes e "Meu prompt validado" | pronto |
 | `m5/` | Conferir: Régua dos 5 interativa, golpes que usam IA, 3 regras, mitos e verdades, "o que a IA ainda não faz bem" | pronto |
-| `m6/` a `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
+| `m6/` | Tarefa 2, preparar a reunião: regras de pesquisa, pedido da pesquisa (pessoa ou só a empresa), Régua dos 5 com fontes, abertura de 2 minutos com cronômetro de ensaio | pronto |
+| `m7/` a `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
 
 ## Como publicar
 
@@ -54,7 +55,7 @@ site/
     js/pedido.js         componente de pedido pronto para copiar, com campos (window.WinConecta.pedido)
     js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
     img/                 logos WIN Conecta, PNG transparente
-  m1/ ... m5/            Módulos (index.html e um .js cada)
+  m1/ ... m6/            Módulos (index.html e um .js cada)
   connect-pack/
     index.html
     connect-pack-data.js os 8 modelos

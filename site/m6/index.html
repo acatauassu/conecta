@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Módulo 6 · Preparar a reunião · WIN Conecta 50+</title>
+  <meta name="description" content="Módulo 6 do WIN Conecta, Edição Especial 50+, Tarefa 2: use a IA para se preparar para uma reunião com quem você não conhece, só com informações públicas e com fonte.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#situacao">Ir para o conteúdo</a>
+
+  <header class="wc-topo">
+    <div class="wc-container">
+      <img src="../assets/img/win-conecta-colorido.png" alt="WIN Conecta" width="2000" height="343">
+      <span style="font:700 18px/1.2 var(--font-display)">Módulo 6 de 9</span>
+    </div>
+  </header>
+
+  <section class="wc-abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <span class="wc-selo" style="width:fit-content">Tarefa 2 · 19h45</span>
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina">Preparar a reunião com quem não conheço</h1>
+      <p class="wc-leitura" style="margin:0">Chegar sabendo com quem vai falar, o que perguntar e como começar. São 45 minutos, com uma reunião sua, real ou imaginada.</p>
+    </div>
+  </section>
+
+  <main>
+    <noscript>
+      <div class="wc-container wc-secao"><div class="wc-aviso"><strong>Ative o JavaScript</strong><p>Esta página guarda o que você escreve e monta os pedidos na tela. Peça ajuda à equipe da sua mesa.</p></div></div>
+    </noscript>
+
+    <section class="wc-secao" style="padding-block:24px">
+      <div class="wc-container">
+        <nav aria-label="Nesta página">
+          <ul class="wc-indice">
+            <li><a href="#situacao">1. A situação</a></li>
+            <li><a href="#entrega">2. O que a IA entrega</a></li>
+            <li><a href="#regras">3. Regras de ouro</a></li>
+            <li><a href="#fazer">4. Prepare a sua</a></li>
+            <li><a href="#ensaio">5. Ensaio</a></li>
+            <li><a href="#troca">6. Troca na mesa</a></li>
+            <li><a href="#registro">7. Registro</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 1. A situação -->
+    <section class="wc-secao wc-secao--suave" id="situacao" aria-labelledby="t-sit">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">3 minutos</span>
+          <h2 class="wc-titulo" id="t-sit">Uma reunião com quem você não conhece</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Quem já passou por isso? É uma situação que dá frio na barriga. Escolha a sua:</p>
+        <div class="wc-painel">
+          <fieldset class="wc-opcoes">
+            <legend>Minha situação</legend>
+            <label class="wc-item"><input type="radio" name="tipo" value="cliente" data-salvar="m6.tipo"><div><b>Cliente novo</b><span>Apresentar uma proposta ou um orçamento.</span></div></label>
+            <label class="wc-item"><input type="radio" name="tipo" value="entrevista" data-salvar="m6.tipo"><div><b>Entrevista</b><span>Conversar sobre uma vaga ou uma oportunidade.</span></div></label>
+            <label class="wc-item"><input type="radio" name="tipo" value="parceiro" data-salvar="m6.tipo"><div><b>Fornecedor ou parceiro</b><span>Negociar, comprar ou propor uma parceria.</span></div></label>
+          </fieldset>
+          <div class="wc-campo">
+            <label for="r-saber">O que eu gostaria de saber antes de entrar na sala?</label>
+            <textarea id="r-saber" data-salvar="m6.saber"></textarea>
+          </div>
+        </div>
+        <div class="wc-dica">
+          <p><strong>Não tem uma reunião marcada?</strong></p>
+          <p>Use uma reunião imaginada: vender um serviço a uma empresa conhecida da sua cidade. O que importa é treinar o método.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. O que a IA entrega -->
+    <section class="wc-secao" id="entrega" aria-labelledby="t-ent">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">3 minutos</span>
+          <h2 class="wc-titulo" id="t-ent">Você chega preparado</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Em poucos minutos, seis coisas para estudar antes da reunião:</p>
+        <ul class="wc-combinados">
+          <li><b>Resumo</b><span>Quem é a pessoa e a empresa, em 5 linhas.</span></li>
+          <li><b>Perguntas</b><span>As que ela pode me fazer.</span></li>
+          <li><b>Dúvidas</b><span>Objeções prováveis, com sugestão de resposta.</span></li>
+          <li><b>Jeito de conversar</b><span>Uma hipótese, não uma certeza.</span></li>
+          <li><b>O que propor</b><span>Ideias que combinam com a necessidade dela.</span></li>
+          <li><b>Abertura de 2 minutos</b><span>Um roteiro para os primeiros minutos.</span></li>
+        </ul>
+        <div class="wc-painel" style="background:var(--painel-suave)">
+          <p class="wc-subtitulo" style="margin:0">A IA prepara a conversa. Quem conversa é você.</p>
+          <p style="margin:0">Você conhece o seu negócio e decide o que usar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Regras de ouro -->
+    <section class="wc-secao wc-secao--suave" id="regras" aria-labelledby="t-reg">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">2 minutos</span>
+          <h2 class="wc-titulo" id="t-reg">Pesquise com cuidado</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Quatro regras de ouro para esta tarefa:</p>
+        <ul class="wc-combinados">
+          <li><b>Só o que é público</b><span>Informações profissionais e da empresa. Nada da vida privada.</span></li>
+          <li><b>Com fonte</b><span>Peça o link de cada informação e abra para ver.</span></li>
+          <li><b>Fato ou suposição</b><span>A IA deve separar o que achou do que supôs.</span></li>
+          <li><b>Mais de uma pessoa?</b><span>Se houver nomes iguais, a IA pergunta antes de seguir.</span></li>
+        </ul>
+        <div class="wc-aviso">
+          <strong>O limite desta tarefa</strong>
+          <p>Pesquisamos só informações profissionais e públicas, como o site da empresa, o perfil profissional e notícias. Não pesquisamos a vida privada de ninguém: nem família, nem redes pessoais. Se a IA não achar a pessoa, pesquise só a empresa. Isso já ajuda muito.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Prepare a sua reunião -->
+    <section class="wc-secao" id="fazer" aria-labelledby="t-fazer">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Mão na massa · 25 minutos</span>
+          <h2 class="wc-titulo" id="t-fazer">Prepare a sua reunião</h2>
+        </div>
+        <ol class="wc-passos">
+          <li><span>Escolha a reunião e preencha os dados. <em>(3 min)</em></span></li>
+          <li><span>Cole o pedido na IA e leia a resposta. <em>(6 min)</em></span></li>
+          <li><span>Passe a Régua dos 5 e abra as fontes. <em>(6 min)</em></span></li>
+          <li><span>Peça o roteiro de abertura de 2 minutos. <em>(4 min)</em></span></li>
+          <li><span>Ensaie a abertura em voz alta com a mesa. <em>(6 min)</em></span></li>
+        </ol>
+
+        <h3 class="wc-subtitulo">Passo 1: a minha reunião</h3>
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">Minha reunião</h3>
+          <p style="margin:0">Só informações profissionais e públicas. Sem a vida privada de ninguém e sem dados de outras pessoas.</p>
+          <fieldset class="wc-opcoes">
+            <legend>Quero pesquisar</legend>
+            <label class="wc-item"><input type="radio" name="modo" value="pessoa" data-salvar="m6.modo"><div><b>Uma pessoa e a empresa dela</b></div></label>
+            <label class="wc-item"><input type="radio" name="modo" value="empresa" data-salvar="m6.modo"><div><b>Só a empresa</b><span>Se não tiver uma pessoa, ou se a IA não achar a pessoa.</span></div></label>
+          </fieldset>
+        </div>
+
+        <h3 class="wc-subtitulo">Passo 2: o pedido da pesquisa</h3>
+        <div id="pedido-pesquisa"></div>
+        <div class="wc-aviso">
+          <strong>Se der problema</strong>
+          <ul style="margin:0;padding-left:1.2em;display:grid;gap:8px">
+            <li><strong>A IA não consegue pesquisar na internet?</strong> Abra o site da empresa, copie o “Sobre nós” e cole no pedido, pedindo o mesmo resumo e as mesmas perguntas.</li>
+            <li><strong>A IA não achou a pessoa?</strong> É normal. Pesquise só a empresa e não insista na pessoa.</li>
+            <li><strong>O plano gratuito tem limites de pesquisa.</strong> Se travar, use o aparelho de alguém da mesa.</li>
+          </ul>
+        </div>
+        <div class="wc-dica">
+          <p><strong>Ao ler a resposta, observe:</strong></p>
+          <ul style="margin:0;padding-left:1.2em;display:grid;gap:6px">
+            <li>Cada informação tem fonte?</li>
+            <li>A IA separa fato de suposição?</li>
+            <li>Há algo que precisa conferir?</li>
+          </ul>
+        </div>
+
+        <h3 class="wc-subtitulo">Passo 3: a Régua dos 5 e as fontes</h3>
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">Antes de usar: Régua dos 5</h3>
+          <p style="margin:0">Peça pelo menos duas fontes abertas. Informação sem fonte, descarte ou confira. A IA pode ter confundido a pessoa com um homônimo.</p>
+          <ul class="wc-lista">
+            <li><label class="wc-item"><input type="checkbox" data-regua data-salvar="m6.regua.nomes"><div><b>1 · Nomes</b><span>O nome e o cargo da pessoa estão certos?</span></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-regua data-salvar="m6.regua.numeros"><div><b>2 · Números</b><span>Datas, valores, tamanho da empresa.</span></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-regua data-salvar="m6.regua.fatos"><div><b>3 · Fatos</b><span>Abra a fonte. Se não abrir, não use.</span></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-regua data-salvar="m6.regua.promessas"><div><b>4 · Promessas</b><span>Não prometa o que a IA sugeriu sem ter certeza.</span></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-regua data-salvar="m6.regua.jeito"><div><b>5 · Meu jeito</b><span>Soa como eu? Eu falaria assim?</span></div></label></li>
+          </ul>
+          <ul class="wc-lista">
+            <li><label class="wc-item"><input type="checkbox" data-fonte data-salvar="m6.fonte1"><div><b>Abri a primeira fonte</b></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-fonte data-salvar="m6.fonte2"><div><b>Abri a segunda fonte</b></div></label></li>
+          </ul>
+          <div class="wc-progresso" aria-live="polite">
+            <p id="regua-texto">0 de 7 conferências feitas.</p>
+            <div class="wc-barra-prog" aria-hidden="true"><i id="regua-barra"></i></div>
+          </div>
+        </div>
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">O que eu conferi</h3>
+          <div class="wc-campo">
+            <label for="r-infos">Informações com fonte que conferi</label>
+            <textarea id="r-infos" data-salvar="m6.infos"></textarea>
+          </div>
+          <div class="wc-campos wc-campos--2">
+            <div class="wc-campo">
+              <label for="r-perguntas">Perguntas que podem me fazer</label>
+              <textarea id="r-perguntas" data-salvar="m6.perguntas"></textarea>
+            </div>
+            <div class="wc-campo">
+              <label for="r-propor">O que posso propor</label>
+              <textarea id="r-propor" data-salvar="m6.propor"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="wc-subtitulo">Passo 4: a abertura de 2 minutos</h3>
+        <p class="wc-leitura" style="margin:0">Cole este pedido na mesma conversa, depois de conferir as informações.</p>
+        <div class="wc-aviso" id="aviso-cartao" hidden>
+          <strong>Falta o seu cartão de contexto</strong>
+          <p>Este pedido usa o seu cartão. Monte o cartão no <a href="../m3/#monte-cartao">Módulo 3</a> e volte, ou copie o pedido e cole o cartão no ChatGPT.</p>
+        </div>
+        <div id="pedido-abertura"></div>
+        <div class="wc-painel">
+          <div class="wc-campo">
+            <label for="r-abertura">Minha abertura de 2 minutos</label>
+            <small id="r-abertura-d">Cole aqui o roteiro que a IA escreveu e troque o que não soa como você.</small>
+            <textarea id="r-abertura" aria-describedby="r-abertura-d" style="min-height:200px" data-salvar="m6.abertura"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Ensaio -->
+    <section class="wc-secao wc-secao--suave" id="ensaio" aria-labelledby="t-ens">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Passo 5 · 6 minutos</span>
+          <h2 class="wc-titulo" id="t-ens">Sua abertura de 2 minutos</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Leia em voz alta para a mesa. Troque o que não soar como você. É falar em voz alta que dá segurança.</p>
+        <ol class="wc-ideias">
+          <li><b>Cumprimento</b><span>20 segundos. Agradeça o tempo da pessoa.</span></li>
+          <li><b>Mostre que se preparou</b><span>40 segundos. Cite algo real e conferido.</span></li>
+          <li><b>Diga o objetivo</b><span>30 segundos. O que você quer da reunião.</span></li>
+          <li><b>Pergunta aberta</b><span>30 segundos. Deixe a pessoa falar.</span></li>
+        </ol>
+
+        <div class="wc-painel" style="justify-items:center;text-align:center" aria-labelledby="t-ensaio-rel">
+          <h3 class="wc-painel__titulo" id="t-ensaio-rel">Cronômetro do ensaio</h3>
+          <p class="wc-subtitulo" id="ensaio-fase" aria-live="polite" style="min-height:1.5em">Pronto para começar</p>
+          <div class="wc-relogio" id="ensaio-relogio" role="timer" aria-live="off">02:00</div>
+          <div class="wc-barra-prog" style="width:100%" aria-hidden="true"><i id="ensaio-barra"></i></div>
+          <div class="wc-pedido__acoes" style="justify-content:center">
+            <button type="button" class="wc-btn" id="ensaio-iniciar">Começar</button>
+            <button type="button" class="wc-btn wc-btn--secundario" id="ensaio-zerar">Zerar</button>
+          </div>
+          <p class="wc-legenda" style="margin:0">O cronômetro avisa em que parte da abertura você deveria estar. Ensaie com a mesa: uma pessoa lê, os outros dizem o que soou bem.</p>
+        </div>
+
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">Ensaiei em voz alta</h3>
+          <ul class="wc-lista">
+            <li><label class="wc-item"><input type="checkbox" data-salvar="m6.ensaio.li"><div><b>Li para a minha mesa.</b></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-salvar="m6.ensaio.troquei"><div><b>Troquei uma frase para soar como eu.</b></div></label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Troca na mesa -->
+    <section class="wc-secao" id="troca" aria-labelledby="t-troca">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">5 minutos</span>
+          <h2 class="wc-titulo" id="t-troca">O que você descobriu?</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Cada pessoa conta à mesa, em 1 minuto:</p>
+        <ul class="wc-combinados">
+          <li><b>Uma descoberta útil</b><span>Algo que você não sabia sobre a empresa ou a pessoa.</span></li>
+          <li><b>Uma coisa que a IA errou</b><span>Ou uma fonte que não abriu ou não existia.</span></li>
+          <li style="grid-column:1/-1"><b>Uma frase que você mudou</b><span>Para soar mais como você na abertura.</span></li>
+        </ul>
+        <p class="wc-leitura" style="margin:0">Sem nota e sem ranking. A mesa escolhe um exemplo para dividir com todos.</p>
+      </div>
+    </section>
+
+    <!-- 7. Registro -->
+    <section class="wc-secao wc-secao--suave" id="registro" aria-labelledby="t-regis">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Registro · 3 minutos</span>
+          <h2 class="wc-titulo" id="t-regis">Registre o que funcionou</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Anote o pedido que você usou, a informação mais útil e o ajuste que você fez. Esse pedido é seu.</p>
+        <div class="wc-painel">
+          <div class="wc-campo">
+            <label for="r-funcionou">O pedido que funcionou</label>
+            <small id="r-funcionou-d">Troque o que é específico por [colchetes], para usar de novo com outra reunião.</small>
+            <textarea id="r-funcionou" aria-describedby="r-funcionou-d" style="min-height:160px" data-salvar="m6.funcionou"></textarea>
+          </div>
+          <div class="wc-pedido__acoes">
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" id="btn-modelo">Começar pelo modelo</button>
+            <button type="button" class="wc-btn wc-btn--leve" id="btn-copiar-funcionou">Copiar meu pedido</button>
+          </div>
+          <div class="wc-campos wc-campos--2">
+            <div class="wc-campo">
+              <label for="r-util">A informação mais útil</label>
+              <textarea id="r-util" data-salvar="m6.util"></textarea>
+            </div>
+            <div class="wc-campo">
+              <label for="r-ajuste">O ajuste que fiz</label>
+              <textarea id="r-ajuste" data-salvar="m6.ajuste"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="wc-painel" style="background:var(--painel)">
+          <h3 class="wc-painel__titulo">Agora: as outras IAs</h3>
+          <p style="margin:0">Esse pedido é de vocês. Agora vamos ver as outras IAs e para que cada uma serve.</p>
+          <p style="margin:0"><a class="wc-btn" href="../m7/">Ir para o Módulo 7</a></p>
+        </div>
+        <nav class="wc-navegacao" aria-label="Outros módulos">
+          <a class="wc-btn wc-btn--secundario wc-btn--leve" href="../m5/">← Módulo 5</a>
+          <a class="wc-btn wc-btn--secundario wc-btn--leve" href="../m7/">Módulo 7 →</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wc-rodape">
+    <div class="wc-container">
+      <p>O que você escreve nesta página fica só neste aparelho. Nada é enviado à WIN nem a nenhuma IA até você copiar e colar por conta própria.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-tudo">Apagar tudo que escrevi no curso</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/conecta.js"></script>
+  <script src="../assets/js/pedido.js"></script>
+  <script src="m6.js"></script>
+</body>
+</html>
