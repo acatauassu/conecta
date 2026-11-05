@@ -10,7 +10,8 @@
      },
      camposRecolhidos: 'Quer trocar ...?'  // opcional: põe os campos dentro de um "abrir"
      rodape:  'texto pequeno abaixo dos botões' // opcional
-     chatgpt: true                    // botão "Abrir o ChatGPT" (padrão: true)
+     chatgpt: true,                   // botão "Abrir o ChatGPT" (padrão: true)
+     aoMudar: function (campo, valor) {}  // opcional: chamado quando a pessoa edita um campo
    })
    Cada campo vazio aparece no pedido como o seu "marcador", em azul. */
 (function () {
@@ -100,13 +101,17 @@
         valores[k] = el.value;
         if (def.chave) W.store.set(def.chave, valores);
         pintar();
+        if (def.aoMudar) def.aoMudar(k, el.value);
       });
     });
     var ex = raiz.querySelector('[data-exemplo]');
     if (ex) ex.addEventListener('click', function () {
       ids.forEach(function (k) {
         var c = def.campos[k];
-        if (c.exemplo !== undefined) { valores[k] = c.exemplo; raiz.querySelector('#' + uid + '-' + k).value = c.exemplo; }
+        if (c.exemplo !== undefined) {
+          valores[k] = c.exemplo; raiz.querySelector('#' + uid + '-' + k).value = c.exemplo;
+          if (def.aoMudar) def.aoMudar(k, c.exemplo);
+        }
       });
       if (def.chave) W.store.set(def.chave, valores);
       pintar();
@@ -118,6 +123,7 @@
       ids.forEach(function (k) {
         if (def.campos[k].padrao !== undefined) valores[k] = def.campos[k].padrao;
         raiz.querySelector('#' + uid + '-' + k).value = valores[k] || '';
+        if (def.aoMudar) def.aoMudar(k, valores[k] || '');
       });
       if (def.chave) W.store.set(def.chave, valores);
       pintar();

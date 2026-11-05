@@ -20,7 +20,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 | `m5/` | Conferir: Régua dos 5 interativa, golpes que usam IA, 3 regras, mitos e verdades, "o que a IA ainda não faz bem" | pronto |
 | `m6/` | Tarefa 2, preparar a reunião: regras de pesquisa, pedido da pesquisa (pessoa ou só a empresa), Régua dos 5 com fontes, abertura de 2 minutos com cronômetro de ensaio | pronto |
 | `m7/` | Panorama das outras IAs: mapa das 5 IAs, a mesma pergunta em duas IAs, jogo "Qual IA para quê?", cuidados | pronto |
-| `m8/` e `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
+| `m8/` | Tarefa 3, divulgar o meu trabalho: as 3 partes do post, cuidados com a imagem, 3 pedidos encadeados (ideias, post, calendário), régua antes de publicar, calendário de 7 dias e prompt validado | pronto |
+| `m9/` | Connect Pack e fechamento | em desenvolvimento |
 
 ## Como publicar
 
@@ -57,7 +58,7 @@ site/
     js/pedido.js         componente de pedido pronto para copiar, com campos (window.WinConecta.pedido)
     js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
     img/                 logos WIN Conecta, PNG transparente
-  m1/ ... m7/            Módulos (index.html e um .js cada)
+  m1/ ... m8/            Módulos (index.html e um .js cada)
   connect-pack/
     index.html
     connect-pack-data.js os 8 modelos
