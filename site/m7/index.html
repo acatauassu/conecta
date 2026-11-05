@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Módulo 7 · Panorama das outras IAs · WIN Conecta 50+</title>
+  <meta name="description" content="Módulo 7 do WIN Conecta, Edição Especial 50+: conheça as outras IAs além do ChatGPT e para que cada uma costuma servir melhor.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#mapa">Ir para o conteúdo</a>
+
+  <header class="wc-topo">
+    <div class="wc-container">
+      <img src="../assets/img/win-conecta-colorido.png" alt="WIN Conecta" width="2000" height="343">
+      <span style="font:700 18px/1.2 var(--font-display)">Módulo 7 de 9</span>
+    </div>
+  </header>
+
+  <section class="wc-abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <span class="wc-selo" style="width:fit-content">Módulo 7 · 20h30</span>
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina">Panorama das outras IAs</h1>
+      <p class="wc-leitura" style="margin:0">Cada uma serve melhor para uma coisa. Veja qual escolher. São 20 minutos, sem precisar criar conta nova.</p>
+    </div>
+  </section>
+
+  <main>
+    <noscript>
+      <div class="wc-container wc-secao"><div class="wc-aviso"><strong>Ative o JavaScript</strong><p>Esta página guarda o que você escreve e monta o jogo na tela. Peça ajuda à equipe da sua mesa.</p></div></div>
+    </noscript>
+
+    <section class="wc-secao" style="padding-block:24px">
+      <div class="wc-container">
+        <nav aria-label="Nesta página">
+          <ul class="wc-indice">
+            <li><a href="#mapa">1. O mapa</a></li>
+            <li><a href="#demo">2. A mesma pergunta</a></li>
+            <li><a href="#jogo">3. Qual IA para quê?</a></li>
+            <li><a href="#cuidados">4. Cuidados</a></li>
+            <li><a href="#levar">5. Para levar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 1. O mapa -->
+    <section class="wc-secao wc-secao--suave" id="mapa" aria-labelledby="t-mapa">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">5 minutos</span>
+          <h2 class="wc-titulo" id="t-mapa">Cinco IAs, cinco usos</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Até agora usamos o ChatGPT. Existem outras IAs, e cada uma tem um ponto forte.</p>
+        <ul class="wc-combinados">
+          <li><b>ChatGPT</b><span>Conversar, escrever, planejar e pesquisar no dia a dia.</span><span><strong>Atenção:</strong> pode errar com segurança. Confira.</span></li>
+          <li><b>Gemini</b><span>Quem já usa Gmail, Drive e agenda do Google.</span><span><strong>Atenção:</strong> veja se o recurso está liberado na sua conta.</span></li>
+          <li><b>Claude</b><span>Textos longos e leitura de documentos extensos.</span><span><strong>Atenção:</strong> o plano gratuito tem limite de uso.</span></li>
+          <li><b>Gemini Notebook</b><span>Resumir e consultar os seus próprios documentos. Antes se chamava NotebookLM.</span><span><strong>Atenção:</strong> só responde com base no que você envia.</span></li>
+          <li style="grid-column:1/-1"><b>Perplexity</b><span>Pesquisar com as fontes à vista.</span><span><strong>Atenção:</strong> abra as fontes, porque nem todas são confiáveis.</span></li>
+        </ul>
+        <div class="wc-painel" style="background:var(--painel-suave)">
+          <p class="wc-subtitulo" style="margin:0">Na dúvida, comece pelo ChatGPT, que você já conhece.</p>
+          <p style="margin:0">Todas têm versão gratuita, com limites. As IAs mudam de nome e de recursos com frequência: veja sempre o que está disponível.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. A mesma pergunta em duas IAs -->
+    <section class="wc-secao" id="demo" aria-labelledby="t-demo">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Demonstração · 4 minutos</span>
+          <h2 class="wc-titulo" id="t-demo">A mesma pergunta em duas IAs</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Faça a mesma pergunta no ChatGPT e em uma IA de pesquisa, e compare: quem mostra a fonte? Se a segunda IA pedir login ou não abrir, tudo bem: faça só com o ChatGPT e olhe se ele mostra a fonte.</p>
+        <div id="pedido-mei"></div>
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">Abra as duas IAs</h3>
+          <p style="margin:0">Digite o endereço você mesmo ou toque no botão. Você não precisa criar conta nova agora.</p>
+          <div class="wc-duas">
+            <div class="wc-bloco">
+              <h3>ChatGPT</h3>
+              <p><strong>chatgpt.com</strong></p>
+              <p><a class="wc-btn wc-btn--secundario wc-btn--leve" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">Abrir o ChatGPT</a></p>
+            </div>
+            <div class="wc-bloco">
+              <h3>IA de pesquisa: Perplexity ou Gemini</h3>
+              <p><strong>perplexity.ai</strong> ou <strong>gemini.google.com</strong></p>
+              <p style="display:flex;flex-wrap:wrap;gap:12px">
+                <a class="wc-btn wc-btn--secundario wc-btn--leve" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">Abrir o Perplexity</a>
+                <a class="wc-btn wc-btn--secundario wc-btn--leve" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Abrir o Gemini</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">O que observar</h3>
+          <ul class="wc-lista">
+            <li><label class="wc-item"><input type="checkbox" data-salvar="m7.obs.comparei"><div><b>Comparei o formato das duas respostas.</b></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-salvar="m7.obs.fonte"><div><b>Vi qual IA mostrou a fonte à vista.</b></div></label></li>
+            <li><label class="wc-item"><input type="checkbox" data-salvar="m7.obs.link"><div><b>Abri um link e conferi na fonte oficial (gov.br).</b></div></label></li>
+          </ul>
+        </div>
+        <div class="wc-dica">
+          <p><strong>Mesmo com fonte, confira.</strong></p>
+          <p>Valores e regras mudam. O importante é abrir a fonte oficial e conferir. A Régua dos 5 vale para todas as IAs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Jogo -->
+    <section class="wc-secao wc-secao--suave" id="jogo" aria-labelledby="t-jogo">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Jogo na mesa · 4 minutos</span>
+          <h2 class="wc-titulo" id="t-jogo">Qual IA para quê?</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Discutam na mesa e escolham uma IA para cada situação. Sem pressa, sem nota. Mais de uma resposta pode servir: o importante é justificar a escolha.</p>
+        <form class="wc-painel" onsubmit="return false" aria-label="Jogo: qual IA para quê">
+          <div class="wc-campos wc-campos--2">
+            <div class="wc-campo">
+              <label for="j-a">A · Resumir três PDFs do meu curso sem sair deles.</label>
+              <select id="j-a" data-salvar="m7.jogo.a"><option value="">Escolha uma IA</option><option>ChatGPT</option><option>Gemini</option><option>Claude</option><option>Gemini Notebook</option><option>Perplexity</option></select>
+            </div>
+            <div class="wc-campo">
+              <label for="j-b">B · Saber uma regra que mudou esta semana, com fonte.</label>
+              <select id="j-b" data-salvar="m7.jogo.b"><option value="">Escolha uma IA</option><option>ChatGPT</option><option>Gemini</option><option>Claude</option><option>Gemini Notebook</option><option>Perplexity</option></select>
+            </div>
+            <div class="wc-campo">
+              <label for="j-c">C · Organizar e-mails e agenda do meu Gmail.</label>
+              <select id="j-c" data-salvar="m7.jogo.c"><option value="">Escolha uma IA</option><option>ChatGPT</option><option>Gemini</option><option>Claude</option><option>Gemini Notebook</option><option>Perplexity</option></select>
+            </div>
+            <div class="wc-campo">
+              <label for="j-d">D · Revisar um texto de 40 páginas.</label>
+              <select id="j-d" data-salvar="m7.jogo.d"><option value="">Escolha uma IA</option><option>ChatGPT</option><option>Gemini</option><option>Claude</option><option>Gemini Notebook</option><option>Perplexity</option></select>
+            </div>
+          </div>
+          <p style="margin:0"><button type="button" class="wc-btn" id="btn-respostas">Ver as respostas</button></p>
+        </form>
+
+        <div id="respostas" hidden>
+          <h3 class="wc-subtitulo" style="margin-bottom:16px">O que costuma funcionar melhor</h3>
+          <ul class="wc-combinados" id="lista-respostas"></ul>
+          <p class="wc-aviso-vivo" id="placar" aria-live="polite" style="margin-top:16px"></p>
+          <div class="wc-dica" style="margin-top:8px">
+            <p><strong>Várias podem servir.</strong></p>
+            <p>São tendências, não regras: todas evoluem e se parecem cada vez mais. O ChatGPT também faz quase tudo. A escolha é sua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Cuidados -->
+    <section class="wc-secao" id="cuidados" aria-labelledby="t-cuid">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">3 minutos</span>
+          <h2 class="wc-titulo" id="t-cuid">Cuidados para qualquer IA</h2>
+        </div>
+        <ol class="wc-ideias">
+          <li><b>Conta só no site oficial</b><span>Digite o endereço você mesmo. Cuidado com anúncios e links recebidos: há golpes com falsos aplicativos de IA.</span></li>
+          <li><b>Sem cartão para testar</b><span>A versão gratuita basta para experimentar.</span></li>
+          <li><b>Confira sempre</b><span>A Régua dos 5 vale para todas.</span></li>
+        </ol>
+        <p class="wc-legenda" style="margin:0">Planos e limites mudam. A versão gratuita pode ter limite de uso por dia.</p>
+      </div>
+    </section>
+
+    <!-- 5. Para levar -->
+    <section class="wc-secao wc-secao--suave" id="levar" aria-labelledby="t-levar">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">2 minutos</span>
+          <h2 class="wc-titulo" id="t-levar">Comece pelo ChatGPT. Teste outra.</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Em casa, faça a mesma pergunta em outra IA e compare. Esta página fica aqui para você consultar.</p>
+        <div class="wc-painel">
+          <div class="wc-campo">
+            <label for="m-testar">Em qual situação vou testar outra IA?</label>
+            <textarea id="m-testar" data-salvar="m7.testar"></textarea>
+          </div>
+        </div>
+        <div class="wc-painel" style="background:var(--painel)">
+          <h3 class="wc-painel__titulo">Vem aí a Tarefa 3</h3>
+          <p style="margin:0">Agora vamos usar a IA para divulgar o seu trabalho: um post completo e um calendário de 7 dias.</p>
+          <p style="margin:0"><a class="wc-btn" href="../m8/">Ir para o Módulo 8</a></p>
+        </div>
+        <nav class="wc-navegacao" aria-label="Outros módulos">
+          <a class="wc-btn wc-btn--secundario wc-btn--leve" href="../m6/">← Módulo 6</a>
+          <a class="wc-btn wc-btn--secundario wc-btn--leve" href="../m8/">Módulo 8 →</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wc-rodape">
+    <div class="wc-container">
+      <p>O que você escreve nesta página fica só neste aparelho. Nada é enviado à WIN nem a nenhuma IA até você copiar e colar por conta própria.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-tudo">Apagar tudo que escrevi no curso</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/conecta.js"></script>
+  <script src="../assets/js/pedido.js"></script>
+  <script src="m7.js"></script>
+</body>
+</html>

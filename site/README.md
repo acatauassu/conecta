@@ -19,7 +19,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 | `m4/` | Tarefa 1, escrever com a minha voz: escolha do texto, pedido fraco e forte, pedido montado com o cartão, ajustes e "Meu prompt validado" | pronto |
 | `m5/` | Conferir: Régua dos 5 interativa, golpes que usam IA, 3 regras, mitos e verdades, "o que a IA ainda não faz bem" | pronto |
 | `m6/` | Tarefa 2, preparar a reunião: regras de pesquisa, pedido da pesquisa (pessoa ou só a empresa), Régua dos 5 com fontes, abertura de 2 minutos com cronômetro de ensaio | pronto |
-| `m7/` a `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
+| `m7/` | Panorama das outras IAs: mapa das 5 IAs, a mesma pergunta em duas IAs, jogo "Qual IA para quê?", cuidados | pronto |
+| `m8/` e `m9/` | Demais módulos do caderno | em desenvolvimento, um por vez |
 
 ## Como publicar
 
@@ -39,6 +40,7 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 - **Gerar o QR code** do endereço `connect-pack/` e substituir nos materiais.
 - **Preencher o Wi-Fi** em `assets/js/config.js` (`wifiRede` e `wifiSenha`). Enquanto estiver vazio, o M1 mostra "A equipe informa na sala". Confira também a data, o horário e o local nesse arquivo.
 - **Conferir os links das lojas** no passo 3 do M1 (App Store e Google Play do ChatGPT), porque os endereços das lojas podem mudar.
+- **Confirmar o nome "Gemini Notebook"** (antes NotebookLM) no M7, e os endereços das outras IAs (chatgpt.com, perplexity.ai, gemini.google.com). Nomes e recursos mudam com frequência.
 - **Abrir cada página** no celular e no notebook, pelo menos uma vez, antes de publicar.
 
 ## Como editar o texto dos modelos
@@ -55,7 +57,7 @@ site/
     js/pedido.js         componente de pedido pronto para copiar, com campos (window.WinConecta.pedido)
     js/config.js         data, horário, local e Wi-Fi do evento (editar aqui)
     img/                 logos WIN Conecta, PNG transparente
-  m1/ ... m6/            Módulos (index.html e um .js cada)
+  m1/ ... m7/            Módulos (index.html e um .js cada)
   connect-pack/
     index.html
     connect-pack-data.js os 8 modelos
