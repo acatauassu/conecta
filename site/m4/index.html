@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Módulo 4 · Escrever com a minha voz · WIN Conecta 50+</title>
+  <meta name="description" content="Módulo 4 do WIN Conecta, Edição Especial 50+, Tarefa 1: use os 4 C e o seu cartão de contexto para reescrever um texto real com o seu jeito.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#escolha">Ir para o conteúdo</a>
+
+  <header class="wc-topo">
+    <div class="wc-container">
+      <img src="../assets/img/win-conecta-colorido.png" alt="WIN Conecta" width="2000" height="343">
+      <span style="font:700 18px/1.2 var(--font-display)">Módulo 4 de 9</span>
+    </div>
+  </header>
+
+  <section class="wc-abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <span class="wc-selo" style="width:fit-content">Tarefa 1 · 18h30</span>
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina">Escrever com a minha voz</h1>
+      <p class="wc-leitura" style="margin:0">E-mails, mensagens e textos que parecem escritos por você. São 40 minutos, com um texto seu de verdade. No fim, você leva o seu prompt validado.</p>
+    </div>
+  </section>
+
+  <main>
+    <noscript>
+      <div class="wc-container wc-secao"><div class="wc-aviso"><strong>Ative o JavaScript</strong><p>Esta página guarda o que você escreve e monta os pedidos na tela. Peça ajuda à equipe da sua mesa.</p></div></div>
+    </noscript>
+
+    <section class="wc-secao" style="padding-block:24px">
+      <div class="wc-container">
+        <nav aria-label="Nesta página">
+          <ul class="wc-indice">
+            <li><a href="#escolha">1. Meu texto</a></li>
+            <li><a href="#demo">2. Fraco e forte</a></li>
+            <li><a href="#jeito">3. Como ela aprende</a></li>
+            <li><a href="#criterios">4. Soar como você</a></li>
+            <li><a href="#fazer">5. Reescreva</a></li>
+            <li><a href="#troca">6. Troca na mesa</a></li>
+            <li><a href="#registro">7. Meu prompt validado</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 1. Escolha -->
+    <section class="wc-secao wc-secao--suave" id="escolha" aria-labelledby="t-escolha">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">2 minutos</span>
+          <h2 class="wc-titulo" id="t-escolha">Qual texto você escreve sempre?</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Escolha um texto seu, de verdade. Ele será o ponto de partida.</p>
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">Meu texto</h3>
+          <fieldset class="wc-opcoes">
+            <legend>O texto que escolhi</legend>
+            <label class="wc-item"><input type="radio" name="tipo" value="email" data-salvar="m4.tipo"><div><b>E-mail para clientes</b></div></label>
+            <label class="wc-item"><input type="radio" name="tipo" value="whatsapp" data-salvar="m4.tipo"><div><b>Mensagem de WhatsApp</b></div></label>
+            <label class="wc-item"><input type="radio" name="tipo" value="proposta" data-salvar="m4.tipo"><div><b>Proposta ou orçamento</b></div></label>
+            <label class="wc-item"><input type="radio" name="tipo" value="convite" data-salvar="m4.tipo"><div><b>Convite ou aviso</b></div></label>
+            <label class="wc-item"><input type="radio" name="tipo" value="redes" data-salvar="m4.tipo"><div><b>Texto para as redes</b></div></label>
+          </fieldset>
+          <div class="wc-campo">
+            <label for="m-melhorar">O que eu queria melhorar</label>
+            <small id="m-melhorar-d">Por exemplo: soa seco demais, ficou longo, não parece comigo.</small>
+            <textarea id="m-melhorar" aria-describedby="m-melhorar-d" data-salvar="m4.melhorar"></textarea>
+          </div>
+        </div>
+        <div class="wc-aviso">
+          <strong>Antes de colar um texto na IA</strong>
+          <p>Troque nomes, números e dados de outras pessoas por <b>[nome]</b> ou <b>XXX</b>. Você pode apagar também telefones e endereços.</p>
+        </div>
+        <div class="wc-ficha">
+          <p class="wc-ficha__titulo">Sem texto à mão? Use o texto de apoio</p>
+          <p style="margin:0">Prezado cliente, segue o orçamento que você pediu. O valor é de R$ <b style="color:var(--acento)">[valor]</b>, com validade de <b style="color:var(--acento)">[dias]</b> dias. Se tiver qualquer dúvida, é só falar. Atenciosamente, <b style="color:var(--acento)">[nome]</b>.</p>
+          <p style="margin:0">Outra saída: escreva 3 linhas agora, sobre uma situação do seu dia a dia.</p>
+          <p style="margin:0"><button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" id="btn-apoio">Usar o texto de apoio</button></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Demonstração -->
+    <section class="wc-secao" id="demo" aria-labelledby="t-demo">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Demonstração · 3 minutos</span>
+          <h2 class="wc-titulo" id="t-demo">Pedido fraco, pedido forte</h2>
+        </div>
+        <div class="wc-duas">
+          <div class="wc-bloco"><h3>Pedido fraco</h3><p>“Escreva um e-mail para um cliente.”</p></div>
+          <div class="wc-bloco" style="border-color:var(--azul);background:var(--painel-suave)">
+            <h3>Pedido forte · 4 C + cartão + meu jeito</h3>
+            <p>“Meu cartão: <b style="color:var(--acento)">[cartão]</b>. Meu jeito de escrever: <b style="color:var(--acento)">[texto meu]</b>. Escreva um e-mail para um cliente que pediu desconto. Tom firme e cordial, até 6 linhas. No fim, diga o que você supôs que eu não contei.”</p>
+          </div>
+        </div>
+        <div class="wc-dica">
+          <p><strong>Observe:</strong> o primeiro soa genérico, serve para qualquer pessoa. O segundo já parece escrito por alguém: por você.</p>
+        </div>
+        <p class="wc-legenda" style="margin:0">Quer ver a diferença no seu aparelho? Copie o pedido fraco, cole no ChatGPT e compare com o resultado do seu pedido, mais abaixo.</p>
+        <div id="pedido-fraco"></div>
+      </div>
+    </section>
+
+    <!-- 3. Como ela aprende o seu jeito -->
+    <section class="wc-secao wc-secao--suave" id="jeito" aria-labelledby="t-jeito">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Demonstração · 3 minutos</span>
+          <h2 class="wc-titulo" id="t-jeito">Como ela aprende o seu jeito</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Três coisas, nesta ordem, no começo da conversa:</p>
+        <ol class="wc-ideias">
+          <li><b>O cartão de contexto</b><span>Quem você é e como gosta de falar.</span></li>
+          <li><b>Um texto seu de exemplo</b><span>De 5 a 10 linhas que mostram o seu jeito.</span></li>
+          <li><b>O pedido com os 4 C</b><span>O que quer, como deve ser e a conferência.</span></li>
+        </ol>
+        <div class="wc-painel" style="background:var(--painel)">
+          <p style="margin:0"><strong>Quanto mais exemplos do seu jeito, mais ela se parece com você.</strong></p>
+          <p style="margin:0">A IA copia o estilo: o tom, o tamanho das frases e as expressões. Ela não copia os dados do texto de exemplo, como nomes e valores.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Critérios -->
+    <section class="wc-secao" id="criterios" aria-labelledby="t-crit">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">3 minutos</span>
+          <h2 class="wc-titulo" id="t-crit">Soar como você: o que observar</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Quatro pontos para você avaliar o resultado.</p>
+        <ul class="wc-combinados">
+          <li><b>Tom</b><span>Carinhoso, firme, formal, direto.</span></li>
+          <li><b>Tamanho</b><span>Mais curto ou mais completo?</span></li>
+          <li><b>Palavras</b><span>Usa expressões que eu uso?</span></li>
+          <li><b>O que evito</b><span>Gírias, termos difíceis, exageros.</span></li>
+        </ul>
+        <div class="wc-dica">
+          <p><strong>E sempre o quarto C: leia tudo antes de usar.</strong></p>
+          <p>Nomes, valores e datas, confira. Quem decide se soa como você é você. A conferência completa vem no próximo módulo, com a Régua dos 5.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Mão na massa -->
+    <section class="wc-secao wc-secao--suave" id="fazer" aria-labelledby="t-fazer">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Mão na massa · 21 minutos</span>
+          <h2 class="wc-titulo" id="t-fazer">Reescreva um texto seu</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Todos fazem juntos, cada um com o seu texto. Cada um no seu ritmo.</p>
+        <ol class="wc-passos">
+          <li><span>Cole o cartão, o texto de exemplo e o pedido. <em>(5 min)</em></span></li>
+          <li><span>Leia o resultado com calma. <em>(2 min)</em></span></li>
+          <li><span>Primeiro ajuste: peça uma mudança. <em>(4 min)</em></span></li>
+          <li><span>Segundo ajuste: afine o que faltou. <em>(4 min)</em></span></li>
+          <li><span>Leia a versão final em voz baixa, para você. <em>(4 min)</em></span></li>
+          <li><span>Troque uma frase que não soa como você. <em>(2 min)</em></span></li>
+        </ol>
+        <div class="wc-aviso" id="aviso-cartao" hidden>
+          <strong>Falta o seu cartão de contexto</strong>
+          <p>O pedido abaixo usa o seu cartão. Monte o cartão no <a href="../m3/#monte-cartao">Módulo 3</a> e volte. Se preferir, copie o pedido assim mesmo e cole o cartão no ChatGPT.</p>
+        </div>
+        <div id="pedido-meu"></div>
+        <p class="wc-legenda" style="margin:0">Cole o pedido em uma conversa nova do ChatGPT. Se o texto for muito longo, cole só um trecho de 10 a 15 linhas: o objetivo é aprender o método.</p>
+
+        <div class="wc-painel">
+          <h3 class="wc-painel__titulo">Ajustes: peça uma mudança de cada vez</h3>
+          <p style="margin:0">Na mesma conversa, escreva um destes pedidos. Toque para copiar.</p>
+          <div class="wc-pedido__acoes" id="chips-ajuste">
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-frase="Deixe mais curto.">Deixe mais curto.</button>
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-frase="Mais caloroso.">Mais caloroso.</button>
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-frase="Use menos termos formais.">Use menos termos formais.</button>
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-frase="Troque a abertura por algo mais direto.">Troque a abertura por algo mais direto.</button>
+          </div>
+          <div class="wc-campos wc-campos--2">
+            <div class="wc-campo">
+              <label for="m-aj1">Primeiro ajuste que pedi</label>
+              <textarea id="m-aj1" data-salvar="m4.ajuste1"></textarea>
+            </div>
+            <div class="wc-campo">
+              <label for="m-aj2">Segundo ajuste que pedi</label>
+              <textarea id="m-aj2" data-salvar="m4.ajuste2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="wc-aviso">
+          <strong>Se der problema</strong>
+          <ul style="margin:0;padding-left:1.2em;display:grid;gap:8px">
+            <li><strong>O resultado ficou formal demais ou genérico?</strong> Cole mais um exemplo do seu jeito e peça: “Reescreva com frases mais curtas e mais próximas do meu texto de exemplo.”</li>
+            <li><strong>Não quer colar nada pessoal?</strong> Troque nomes e números por [nome] e XXX, ou use o texto de apoio.</li>
+            <li><strong>Difícil digitar?</strong> Fale o pedido no microfone do ChatGPT, no seu aparelho.</li>
+          </ul>
+        </div>
+
+        <div class="wc-painel" style="background:var(--painel)">
+          <h3 class="wc-painel__titulo">Terminou antes?</h3>
+          <p style="margin:0">Peça uma versão mais curta, para WhatsApp, ou adapte o texto para outro público. Toque para copiar:</p>
+          <div class="wc-pedido__acoes" id="chips-extra">
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-frase="Faça uma versão mais curta, para WhatsApp.">Versão mais curta, para WhatsApp</button>
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" data-frase="Adapte este texto para outro público: pessoas que não me conhecem. Mantenha o meu jeito de escrever.">Adaptar para outro público</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Troca na mesa -->
+    <section class="wc-secao" id="troca" aria-labelledby="t-troca">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">5 minutos</span>
+          <h2 class="wc-titulo" id="t-troca">Troca na mesa</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Cada pessoa mostra à mesa duas coisas, em voz alta:</p>
+        <ol class="wc-passos">
+          <li><span><strong>Uma coisa que melhorou.</strong> O que ficou melhor do que o seu texto original.</span></li>
+          <li><span><strong>Uma coisa em que a IA errou.</strong> O que não soou como você ou estava errado.</span></li>
+        </ol>
+        <p class="wc-leitura" style="margin:0">Sem nota e sem ranking. Quem aprende com o erro dos outros também ganha.</p>
+        <div class="wc-painel">
+          <div class="wc-campo">
+            <label for="m-melhorou">O que melhorou, e onde a IA errou</label>
+            <textarea id="m-melhorou" data-salvar="m4.melhorou"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Registro -->
+    <section class="wc-secao wc-secao--suave" id="registro" aria-labelledby="t-reg">
+      <div class="wc-container" style="display:grid;gap:24px">
+        <div style="display:grid;gap:8px">
+          <span class="wc-tempo">Registro · 3 minutos</span>
+          <h2 class="wc-titulo" id="t-reg">Meu prompt validado</h2>
+        </div>
+        <p class="wc-leitura" style="margin:0">Registre o pedido que funcionou para você. Você vai usar esse pedido de novo.</p>
+        <ol class="wc-passos">
+          <li><span>Copie o último pedido que você fez.</span></li>
+          <li><span>Troque o texto específico por <b style="color:var(--acento)">[colchetes]</b>.</span></li>
+          <li><span>Escreva o que você ajustou e funcionou.</span></li>
+        </ol>
+        <div class="wc-painel">
+          <div class="wc-campo">
+            <label for="m-validado">Meu prompt validado</label>
+            <small id="m-validado-d">Se quiser, comece pelo modelo e adapte com o que funcionou para você.</small>
+            <textarea id="m-validado" aria-describedby="m-validado-d" style="min-height:200px" data-salvar="m4.validado"></textarea>
+          </div>
+          <div class="wc-pedido__acoes">
+            <button type="button" class="wc-btn wc-btn--secundario wc-btn--leve" id="btn-modelo">Começar pelo modelo</button>
+            <button type="button" class="wc-btn wc-btn--leve" id="btn-copiar-validado">Copiar meu prompt</button>
+          </div>
+          <div class="wc-campos wc-campos--2">
+            <div class="wc-campo wc-campo--larga">
+              <label for="m-diferenca">O ajuste que fez a diferença</label>
+              <textarea id="m-diferenca" data-salvar="m4.diferenca"></textarea>
+            </div>
+            <div class="wc-campo">
+              <label for="m-usar">Vou usar este pedido para</label>
+              <textarea id="m-usar" data-salvar="m4.usar"></textarea>
+            </div>
+            <div class="wc-campo">
+              <label for="m-aprendi">O que aprendi</label>
+              <textarea id="m-aprendi" data-salvar="m4.aprendi"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="wc-painel" style="background:var(--painel)">
+          <h3 class="wc-painel__titulo">Agora: conferir o que a IA escreve</h3>
+          <p style="margin:0">Você escreveu textos bons. Agora vamos aprender a conferir o que a IA escreve antes de usar. Guarde o texto que você acabou de reescrever: ele é o seu material no próximo módulo.</p>
+          <p style="margin:0"><a class="wc-btn" href="../m5/">Ir para o Módulo 5</a></p>
+        </div>
+        <nav class="wc-navegacao" aria-label="Outros módulos">
+          <a class="wc-btn wc-btn--secundario wc-btn--leve" href="../m3/">← Módulo 3</a>
+          <a class="wc-btn wc-btn--secundario wc-btn--leve" href="../m5/">Módulo 5 →</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wc-rodape">
+    <div class="wc-container">
+      <p>O que você escreve nesta página fica só neste aparelho. Nada é enviado à WIN nem a nenhuma IA até você copiar e colar por conta própria.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-tudo">Apagar tudo que escrevi no curso</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/conecta.js"></script>
+  <script src="../assets/js/pedido.js"></script>
+  <script src="m4.js"></script>
+</body>
+</html>

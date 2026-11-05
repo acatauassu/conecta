@@ -127,7 +127,16 @@
       W.copiar(montar(def, valores).texto, alvoTexto);
     });
     pintar();
-    return { texto: function () { return montar(def, valores).texto; } };
+    return {
+      texto: function () { return montar(def, valores).texto; },
+      definir: function (k, v) {
+        valores[k] = v;
+        var el = raiz.querySelector('#' + uid + '-' + k);
+        if (el) el.value = v;
+        if (def.chave) W.store.set(def.chave, valores);
+        pintar();
+      }
+    };
   }
 
   W.pedido = pedido;
