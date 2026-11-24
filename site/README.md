@@ -23,6 +23,7 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 | `m6/` | Tarefa 2, preparar a reunião: regras de pesquisa, pedido da pesquisa (pessoa ou só a empresa), Régua dos 5 com fontes, abertura de 2 minutos com cronômetro de ensaio | pronto |
 | `m7/` | Panorama das outras IAs: mapa das 5 IAs, a mesma pergunta em duas IAs, jogo "Qual IA para quê?", cuidados | pronto |
 | `m8/` | Tarefa 3, divulgar o meu trabalho: as 3 partes do post, cuidados com a imagem, 3 pedidos encadeados (ideias, post, calendário), régua antes de publicar, calendário de 7 dias e prompt validado | pronto |
+| `avaliacao/` | Formulário de avaliação: duas notas de 0 a 10 (NPS), avaliação do treinamento e do instrutor, sugestões e aceite para receber informações de outros cursos. Precisa de destino ligado pelo time (ver `avaliacao/avaliacao.js`) | pronto, falta ligar o envio |
 | `m9/` | Connect Pack e fechamento: os 8 modelos, como adaptar, gratuito ou pago, escolha do primeiro, resumo da noite lido do aparelho, próxima semana, avaliação | pronto |
 
 ## Como publicar
@@ -42,7 +43,8 @@ Páginas do caderno digital do **WIN Conecta, Edição Especial 50+**.
 - **Testar os 8 modelos no ChatGPT** (plano gratuito e pago) e preencher `testadoEm` de cada um em `connect-pack/connect-pack-data.js`, no formato `"25/11/2026"`. Enquanto estiver `null`, a data não aparece na página.
 - **Gerar o QR code** do endereço `connect-pack/` e substituir nos materiais.
 - **Preencher o Wi-Fi** em `assets/js/config.js` (`wifiRede` e `wifiSenha`). Enquanto estiver vazio, o M1 mostra "A equipe informa na sala". Confira também a data, o horário e o local nesse arquivo.
-- **Preencher `avaliacaoUrl` e `proximosCursosUrl`** em `assets/js/config.js`. O M9 mostra o botão da avaliação e o dos próximos cursos só quando o endereço estiver preenchido.
+- **Ligar o envio da avaliação** em `assets/js/config.js`: preencha `avaliacaoEnvioUrl` (a página faz POST em JSON) ou defina a função `avaliacaoEnviar`. O formato dos dados está no cabeçalho de `avaliacao/avaliacao.js`. Teste com `avaliacao/index.html?teste=1` (mostra os dados na tela, sem enviar). Sem destino ligado, a pessoa vê "não conseguimos enviar agora".
+- **Preencher `proximosCursosUrl`** em `assets/js/config.js`. O botão dos próximos cursos só aparece quando o endereço estiver preenchido. O `avaliacaoUrl` já aponta para a página `avaliacao/`; o QR do slide 9 do M9 deve apontar para ela.
 - **Conferir os links das lojas** no passo 3 do M1 (App Store e Google Play do ChatGPT), porque os endereços das lojas podem mudar.
 - **Confirmar o nome "Gemini Notebook"** (antes NotebookLM) no M7, e os endereços das outras IAs (chatgpt.com, perplexity.ai, gemini.google.com). Nomes e recursos mudam com frequência.
 - **Imprimir o Meu caderno** em um navegador de verdade e conferir o PDF. A impressão é em preto e branco, sem menus.
@@ -69,6 +71,7 @@ site/
     img/                 logos WIN Conecta, PNG transparente (o "-pequeno" é o do cabeçalho, com 39 KB)
   index.html, home.js    Página inicial
   meu-caderno/           Meu caderno (index.html e caderno.js)
+  avaliacao/             Formulário de avaliação (index.html e avaliacao.js)
   m1/ ... m9/            Módulos (index.html e um .js cada)
   connect-pack/
     index.html

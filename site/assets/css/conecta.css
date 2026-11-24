@@ -270,3 +270,20 @@ a { color: var(--acento); text-underline-offset: 3px; }
 
 /* Linha clicável de abrir/fechar (details) com altura de toque confortável */
 details > summary { padding-block: 10px; }
+
+/* ---------- Avaliação (escalas de nota) ---------- */
+.wc-escala { border: 0; margin: 0; padding: 0; display: grid; gap: var(--espaco-2); min-width: 0; }
+.wc-escala legend { padding: 0; margin-bottom: var(--espaco-2); font: 700 20px/1.3 var(--font-display); color: var(--texto); }
+.wc-escala__notas { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: var(--espaco-2); }
+.wc-escala__notas--5 { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 380px) { .wc-escala__notas--5 { gap: 4px; } }
+.wc-escala__notas label { position: relative; display: flex; align-items: center; justify-content: center; min-height: 56px; border: 2px solid var(--borda); border-radius: var(--raio-campo); background: var(--painel); color: var(--texto); font: 800 22px/1 var(--font-display); cursor: pointer; }
+.wc-escala__notas label:hover { background: var(--painel-suave); }
+.wc-escala__notas input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.wc-escala__notas label:has(input:checked) { background: var(--azul); border-color: var(--azul); color: var(--branco); }
+.wc-escala__notas label:has(input:focus-visible) { outline: 3px solid var(--foco); outline-offset: 2px; }
+.wc-escala__pontas { display: flex; justify-content: space-between; gap: var(--espaco-3); margin: 0; font: 500 16px/1.4 var(--font-body); color: var(--texto-suave); }
+.wc-escala--erro legend { color: var(--atencao); }
+.wc-escala--erro .wc-escala__notas label { border-color: var(--atencao); }
+.wc-erro { margin: 0; font: 700 16px/1.4 var(--font-body); color: var(--atencao); }
+.wc-contador { margin: 0; text-align: right; font: 500 16px/1.4 var(--font-body); color: var(--texto-suave); }

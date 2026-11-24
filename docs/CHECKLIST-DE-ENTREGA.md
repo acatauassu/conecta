@@ -43,7 +43,8 @@ Tudo em `site/assets/js/config.js`. Os campos vazios têm comportamento definido
 | # | Campo | O que preencher | Se ficar vazio | Situação |
 | --- | --- | --- | --- | --- |
 | K1 | `wifiRede`, `wifiSenha` | Rede e senha do Wi-Fi do Nex Hall (aparece no M1) | O M1 diz "A equipe informa na sala" | ☐ |
-| K2 | `avaliacaoUrl` | Endereço do formulário de avaliação (o mesmo do QR do slide 9 do M9) | O M9 diz que a equipe passa o link na sala | ☐ |
+| K2 | `avaliacaoUrl` | Já aponta para a página `avaliacao/` do site. O QR do slide 9 do M9 deve apontar para ela. | O M9 diz que a equipe passa o link na sala | ☐ |
+| K2b | `avaliacaoEnvioUrl` ou `avaliacaoEnviar` | **[BLOQUEIA]** Destino das respostas da avaliação (integração com o banco de dados). Formato dos dados em `site/avaliacao/avaliacao.js`. Teste com `avaliacao/index.html?teste=1`. | A pessoa vê "não conseguimos enviar agora" e nada é gravado | ☐ |
 | K3 | `proximosCursosUrl` | Página dos próximos cursos da WIN Business School | O botão não aparece | ☐ |
 | K4 | `data`, `horario`, `local` | Conferir | Usa 25/11/2026 (quarta), 17h às 22h, Nex Hall, Belém/PA | ☐ |
 

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Avaliação · WIN Conecta 50+</title>
+  <meta name="description" content="Avaliação do WIN Conecta, Edição Especial 50+: duas notas de 0 a 10, a avaliação do treinamento e do instrutor, e um espaço para sugestões. Leva cerca de 2 minutos.">
+  <meta name="theme-color" content="#00144c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../assets/css/conecta.css">
+</head>
+<body>
+  <a class="wc-pular" href="#form-avaliacao">Ir para o formulário</a>
+
+  <header class="wc-topo">
+    <div class="wc-container">
+      <img src="../assets/img/win-conecta-colorido-pequeno.png" alt="WIN Conecta" width="600" height="103">
+      <span style="display:flex;align-items:center;gap:16px"><a class="wc-link-topo" href="../index.html">Início</a><span style="font:700 18px/1.2 var(--font-display)">Avaliação</span></span>
+    </div>
+  </header>
+
+  <section class="wc-abertura" aria-labelledby="titulo-pagina">
+    <svg class="wc-curvas" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+      <circle cx="760" cy="430" r="400"/>
+      <circle cx="120" cy="620" r="300"/>
+      <path d="M0 400 C 180 460, 360 330, 560 370 S 860 450, 1000 360"/>
+    </svg>
+    <div class="wc-container">
+      <span class="wc-selo" style="width:fit-content">Avaliação · 2 minutos</span>
+      <h1 class="wc-titulo wc-titulo--display" id="titulo-pagina">Sua opinião importa</h1>
+      <p class="wc-leitura" style="margin:0">Conte como foi a noite. Só as duas notas de 0 a 10 são obrigatórias. O resto você responde se quiser. Não pedimos nome, e-mail nem telefone aqui.</p>
+    </div>
+  </section>
+
+  <main>
+    <noscript>
+      <div class="wc-container wc-secao"><div class="wc-aviso"><strong>Ative o JavaScript</strong><p>Este formulário precisa do JavaScript do navegador para funcionar. Peça ajuda à equipe da sua mesa.</p></div></div>
+    </noscript>
+
+    <!-- Já enviada neste aparelho / depois de enviar -->
+    <section class="wc-secao" id="obrigado" aria-labelledby="t-obrigado" hidden>
+      <div class="wc-container">
+        <div class="wc-painel" style="background:var(--painel-suave)">
+          <h2 class="wc-titulo wc-titulo--display" id="t-obrigado" tabindex="-1">Obrigado pela sua avaliação.</h2>
+          <p class="wc-leitura" style="margin:0">Ela ajuda a melhorar as próximas edições. Foi uma alegria ter você nesta noite.</p>
+          <p class="wc-legenda" style="margin:0" id="obrigado-teste" hidden></p>
+          <pre class="wc-pedido__texto" id="teste-saida" style="white-space:pre-wrap;overflow-wrap:anywhere" hidden></pre>
+          <p style="margin:0" id="proximos" hidden><a class="wc-btn" id="proximos-link" href="#" target="_blank" rel="noopener noreferrer">Conheça os próximos cursos da WIN Business School</a></p>
+          <p style="margin:0;display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+            <a class="wc-btn wc-btn--secundario" href="../index.html">Voltar ao início</a>
+            <button type="button" class="wc-link-botao" id="btn-de-novo">Responder de novo</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <form id="form-avaliacao" novalidate aria-describedby="aval-resumo-erro">
+      <!-- 1. NPS -->
+      <section class="wc-secao wc-secao--suave" aria-labelledby="t-nps">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <div style="display:grid;gap:8px">
+            <span class="wc-tempo">Obrigatório</span>
+            <h2 class="wc-titulo" id="t-nps">Duas notas de 0 a 10</h2>
+          </div>
+          <div class="wc-painel" id="bloco-nps"></div>
+        </div>
+      </section>
+
+      <!-- 2. Treinamento -->
+      <section class="wc-secao" aria-labelledby="t-trein">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <div style="display:grid;gap:8px">
+            <h2 class="wc-titulo" id="t-trein">Avaliação do treinamento</h2>
+            <p class="wc-leitura" style="margin:0">Dê uma nota de 1 a 5 para cada item. Pode deixar em branco o que não quiser avaliar.</p>
+          </div>
+          <div class="wc-painel" id="bloco-trein"></div>
+        </div>
+      </section>
+
+      <!-- 3. Instrutor -->
+      <section class="wc-secao wc-secao--suave" aria-labelledby="t-instr">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <div style="display:grid;gap:8px">
+            <h2 class="wc-titulo" id="t-instr">Avaliação do instrutor</h2>
+            <p class="wc-leitura" style="margin:0">Sobre o Denis, que conduziu a noite. Nota de 1 a 5 para cada item.</p>
+          </div>
+          <div class="wc-painel" id="bloco-instr"></div>
+        </div>
+      </section>
+
+      <!-- 4. Sugestões -->
+      <section class="wc-secao" aria-labelledby="t-sug">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <h2 class="wc-titulo" id="t-sug">Sugestões</h2>
+          <div class="wc-painel">
+            <div class="wc-campo">
+              <label for="sugestoes">O que podemos fazer melhor? Algum elogio, crítica ou ideia para as próximas edições?</label>
+              <small id="sugestoes-d">Opcional. Não escreva nomes nem dados de outras pessoas.</small>
+              <textarea id="sugestoes" maxlength="1000" rows="5" aria-describedby="sugestoes-d sugestoes-cont" data-salvar="aval.sugestoes" autocomplete="off"></textarea>
+              <p class="wc-contador" id="sugestoes-cont" aria-live="off">0 de 1000 caracteres</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Novos cursos + enviar -->
+      <section class="wc-secao wc-secao--suave" aria-labelledby="t-enviar">
+        <div class="wc-container" style="display:grid;gap:24px">
+          <h2 class="wc-titulo" id="t-enviar">Para terminar</h2>
+          <div class="wc-painel">
+            <label class="wc-item" for="novos-cursos">
+              <input type="checkbox" id="novos-cursos" name="novosCursos" data-salvar="aval.novosCursos">
+              <div>
+                <b>Quero receber informações sobre outros cursos da WIN Business School.</b>
+                <span>Se marcar, a WIN poderá falar com você, pelos contatos que você já informou na inscrição, sobre outros cursos. Pode deixar desmarcado: isso não muda nada na sua avaliação. Você pode pedir para parar de receber quando quiser.</span>
+              </div>
+            </label>
+            <div class="wc-aviso" id="aval-resumo-erro" role="alert" hidden tabindex="-1">
+              <strong>Falta pouco</strong>
+              <p id="aval-erro-texto"></p>
+            </div>
+            <p style="margin:0"><button type="submit" class="wc-btn" id="btn-enviar">Enviar avaliação</button></p>
+            <p class="wc-legenda" style="margin:0">Suas respostas só saem deste aparelho quando você toca em Enviar.</p>
+          </div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <footer class="wc-rodape">
+    <div class="wc-container">
+      <p>Enquanto você não enviar, o que marcou fica só neste aparelho.</p>
+      <p><button type="button" class="wc-link-botao" id="btn-apagar-aval">Apagar o que marquei nesta avaliação</button></p>
+      <p>WIN Conecta · Edição Especial 50+ · Sua experiência. Novas possibilidades.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/config.js"></script>
+  <script src="../assets/js/conecta.js"></script>
+  <script src="avaliacao.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const fs=require('fs');
 const AXE=fs.readFileSync(require.resolve('axe-core/axe.min.js'),'utf8');
-const PAGES=['index.html','m1/index.html','m2/index.html','m3/index.html','m4/index.html','m5/index.html','m6/index.html','m7/index.html','m8/index.html','m9/index.html','connect-pack/index.html','connect-pack/index.html#modelo-2','meu-caderno/index.html'];
+const PAGES=['index.html','m1/index.html','m2/index.html','m3/index.html','m4/index.html','m5/index.html','m6/index.html','m7/index.html','m8/index.html','m9/index.html','avaliacao/index.html','connect-pack/index.html','connect-pack/index.html#modelo-2','meu-caderno/index.html'];
 const BASE=process.env.BASE||'http://localhost:8776/';
 (async()=>{
   const b=await chromium.launch(); const resumo={};

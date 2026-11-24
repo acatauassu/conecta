@@ -124,6 +124,14 @@ CHAVES = [
         ('m9.s{1,2,3}', 'texto', 'As 3 situações da próxima semana'),
         ('m9.surpreendeu', 'texto', 'O que mais surpreendeu na noite'),
     ]),
+    ('Avaliação', [
+        ('aval.nps-{treinamento,win}', '`"0"` a `"10"`', 'As duas notas de recomendação (rascunho, até enviar)'),
+        ('aval.trein-{utilidade,ritmo,atividades,material,organizacao,apoio}', '`"1"` a `"5"`', 'Notas da avaliação do treinamento (rascunho)'),
+        ('aval.instr-{dominio,clareza,duvidas,conducao}', '`"1"` a `"5"`', 'Notas da avaliação do instrutor (rascunho)'),
+        ('aval.sugestoes', 'texto', 'Sugestões (rascunho)'),
+        ('aval.novosCursos', 'verdadeiro ou falso', 'Aceite para receber informações de outros cursos (rascunho)'),
+        ('aval.enviada', 'verdadeiro ou falso', 'Marca que a avaliação já foi enviada neste aparelho. Os rascunhos são apagados no envio'),
+    ]),
     ('Connect Pack', [
         ('pack.m{1..8}', 'objeto com os campos do modelo', 'O que a pessoa preencheu em cada modelo'),
         ('pack.c{1..8}', 'objeto `{índice: verdadeiro ou falso}`', 'Itens de "Confira antes de usar" marcados em cada modelo'),
@@ -172,7 +180,7 @@ def tabela_de_chaves():
     if faltando:
         print('ERRO: chaves usadas no código e não documentadas em gerar.py:', faltando)
         sys.exit(1)
-    sobrando = sorted(k for k in documentadas if not k.startswith(('pack.', 'm8.cal.')) and k not in chaves_no_codigo())
+    sobrando = sorted(k for k in documentadas if not k.startswith(('pack.', 'm8.cal.', 'aval.nps-', 'aval.trein-', 'aval.instr-')) and k not in chaves_no_codigo())
     if sobrando:
         print('AVISO: chaves documentadas que não aparecem no código:', sobrando)
     md = ''
