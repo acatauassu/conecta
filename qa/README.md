@@ -7,6 +7,7 @@ Três scripts que o time pode repetir depois de qualquer mudança nas páginas.
 | `acessibilidade-axe.js` | Roda o axe-core (WCAG 2.1 A e AA) em todas as páginas, no computador e no celular, nos modos claro e escuro. Esperado: "Nenhuma violação encontrada". |
 | `acessibilidade-manual.js` | Alvos de toque menores que 44px, texto menor que 16px, estrutura de títulos, link "Ir para o conteúdo" no primeiro Tab, contorno de foco, rolagem lateral a 320px e texto com espaçamento aumentado. |
 | `percurso-completo.js` | Simula uma pessoa do M1 ao M9 no celular, pelos botões "Ir para o Módulo", e confere a página inicial e o Meu caderno no final. Apaga os dados no fim. |
+| `gerar-qr.py` | Gera o QR code (PNG e SVG) de um endereço do caderno digital. Uso: `python3 qa/gerar-qr.py https://SEU-SITE/avaliacao/index.html QR-avaliacao docs/qr`. Precisa de `pip install segno`. Use o endereço definitivo publicado pelo time. |
 
 ## Como rodar
 
